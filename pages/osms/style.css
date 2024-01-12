@@ -1,0 +1,121 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.osms__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.osms__details {
+  width: 100%;
+  border-radius: 90px;
+  background: #04633e;
+  padding: 48px 87px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.osms__details-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.osms__detail:first-child {
+  margin-bottom: 38px;
+}
+
+.osms__detail-top {
+  display: flex;
+  align-items: center;
+}
+
+.osms__detail-top svg {
+  margin-right: 10px;
+}
+
+.osms__detail span,
+.osms__detail p {
+  color: #fff;
+}
+
+.osms__detail p {
+  margin-top: 9px;
+  padding-left: 31px;
+}
+
+.yandex-map {
+  width: 100%;
+  border-radius: 90px;
+}
+
+.osms__hero {
+  background-image: url("../../images/osms-card-bg.png");
+  padding: 60px 350px 60px 90px;
+}
+
+.osms__hero-title {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.osms__hero-description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 38px; /* 158.333% */
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.osms__hero-button {
+  display: inline-flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 108px;
+  color: black;
+  background: #ffca79;
+}
+
+.osms__card {
+  background-color: #04633e;
+  padding: 79px 110px;
+}
+
+.osms__card-headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.osms__card h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  margin-left: 10px;
+}
+
+.osms__card p {
+  margin-left: 58px;
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  margin-top: 24px;
+}
