@@ -8,50 +8,6 @@
   margin-bottom: 60px;
 }
 
-.osms__details {
-  width: 100%;
-  border-radius: 90px;
-  background: #04633e;
-  padding: 48px 87px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.osms__details-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.osms__detail:first-child {
-  margin-bottom: 38px;
-}
-
-.osms__detail-top {
-  display: flex;
-  align-items: center;
-}
-
-.osms__detail-top svg {
-  margin-right: 10px;
-}
-
-.osms__detail span,
-.osms__detail p {
-  color: #fff;
-}
-
-.osms__detail p {
-  margin-top: 9px;
-  padding-left: 31px;
-}
-
-.yandex-map {
-  width: 100%;
-  border-radius: 90px;
-}
-
 .osms__hero {
   background-image: url("../../images/osms-card-bg.png");
   padding: 60px 350px 60px 90px;
