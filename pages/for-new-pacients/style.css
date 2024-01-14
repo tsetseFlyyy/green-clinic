@@ -1,0 +1,131 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.for-new-pacients__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.green-card {
+  border-radius: 90px;
+  background: #27ae79;
+  padding: 85px 79px;
+}
+
+.green-card h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -1.44px;
+}
+
+.green-card p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; /* 150% */
+  letter-spacing: -0.72px;
+  margin-top: 20px;
+}
+
+.transparent-card {
+  border-radius: 90px;
+  border: 1px solid #0f8f5d;
+  padding: 81px 101px;
+  margin-top: 60px;
+}
+
+.transparent-card h2 {
+  color: #ffca79;
+  font-family: Geologica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.6px;
+  margin-left: 20px;
+}
+
+.transparent-card-headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.transparent-card-span {
+  color: #6dbd99;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.72px;
+}
+
+.transparent-card__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.transparent-card__row-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.transparent-card__row-title span {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px; /* 135% */
+  letter-spacing: -0.8px;
+  margin-left: 10px;
+  max-width: 411px;
+}
+
+.transparent-card__row-description {
+  width: 65%;
+}
+
+.transparent-card__row-description p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  letter-spacing: -0.72px;
+}
+
+.transparent-card__row-description:not(:first-child) p {
+  margin-top: 30px;
+}
+
+.transparent-card-number {
+  position: relative;
+}
+
+.transparent-card-number span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #262626;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}

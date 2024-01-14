@@ -1,0 +1,54 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.about-clinic__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.about-clinic__hero {
+  background-color: #04633e;
+  padding: 183px 154px 234px;
+  background-image: url("../../images/about-clinic-hero.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.about-clinic__hero h1 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.about-clinic__hero p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  width: 609px;
+}
+
+.about-clinic__headline {
+  margin-top: 53px;
+}
+
+.about-clinic__description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 25px;
+}
+
+.about-clinic__description-bold {
+  font-weight: 800;
+  margin-top: 35px;
+}
