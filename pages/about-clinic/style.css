@@ -1,3 +1,14 @@
+:root {
+  --extra-extra-small: 374px;
+  --extra-small: 425px;
+  --small: 576px;
+  --medium: 768px;
+  --large: 992px;
+  --extra-large: 1200px;
+  --extra-extra-large: 1400px;
+  --extra-extra-extra-large: 1600px;
+}
+
 .section {
   background-image: url("../../images/contacts-bg.jpg");
   padding-bottom: 164px;
@@ -51,4 +62,40 @@
 .about-clinic__description-bold {
   font-weight: 800;
   margin-top: 35px;
+}
+
+@media (max-width: 1600px) {
+  .about-clinic__hero {
+    padding: 140px 120px 180px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .about-clinic__hero {
+    padding: 100px 120px 140px;
+  }
+
+  .about-clinic__hero h1 {
+    font-size: 50px;
+  }
+
+  .about-clinic__hero p {
+    font-size: 19px;
+  }
+
+  .about-clinic__description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-clinic__hero {
+    padding: 100px 100px 140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-clinic__hero {
+    padding: 120px 70px 140px;
+  }
 }
