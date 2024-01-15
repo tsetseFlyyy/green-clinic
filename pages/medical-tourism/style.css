@@ -21,7 +21,7 @@
   flex-direction: column;
   z-index: 1;
   width: 33%;
-  padding: 55px 0 0;
+  padding: 55px 0 10px;
 }
 
 .medical-tourism__hero-card::before {
@@ -64,9 +64,10 @@
   font-weight: 400;
   line-height: normal;
   text-align: center;
+  margin-top: 10px;
 }
 
-.medical-tourism__hero-card .bottom span {
+.medical-tourism__hero-card span {
   color: #fff;
   text-align: center;
   font-family: Geologica;
@@ -74,6 +75,7 @@
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  margin-top: 15px;
 }
 
 .second::before {
@@ -84,4 +86,138 @@
 .third::before {
   border-radius: 50px;
   background: linear-gradient(180deg, #e0f6a0 0%, rgba(62, 226, 108, 0) 100%);
+}
+
+.expo-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 125px;
+}
+
+.expo-card-left {
+  width: 53%;
+  border-radius: 90px;
+  background-image: url("../../images/expo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 573px;
+}
+
+.expo-card-right {
+  border-radius: 90px;
+  background: #fff;
+  padding: 134px 144px;
+  width: 55%;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  height: 573px;
+}
+
+.expo-card-right li {
+  color: #2d2828;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.expo-card-right h2 {
+  color: #2d2828;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 77px;
+}
+
+.second-title {
+  margin-top: 120px;
+}
+
+.medical-tourism__description-one {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  width: 50%;
+}
+
+.medical-tourism__description-two {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 50px 0;
+}
+
+.green-card {
+  border-radius: 90px;
+  background: #2db982;
+  padding: 74px 101px;
+  margin-top: 120px;
+}
+
+.green-card h1 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.green-card p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 20px;
+  width: 55%;
+}
+
+.sale {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sale p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.sale h1 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 33px;
+}
+
+.sale img {
+  background-image: url("../../images/wyndham-sale.png");
+  max-height: 573px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 90px;
 }
