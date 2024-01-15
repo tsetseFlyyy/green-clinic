@@ -219,4 +219,82 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 90px;
+  max-width: 55%;
+}
+
+.companies img {
+  margin-right: 30px;
+}
+
+.sale-left {
+  width: 40%;
+}
+
+@media (max-width: 1600px) {
+  .medical-tourism__hero-card .center {
+    font-size: 240px;
+  }
+
+  .medical-tourism__hero-card .bottom,
+  .medical-tourism__hero-card .top {
+    font-size: 38px;
+  }
+
+  .medical-tourism__hero-card span {
+    font-size: 20px;
+  }
+
+  .expo-card-left,
+  .expo-card-right {
+    height: 670px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .medical-tourism__hero-card .center {
+    font-size: 210px;
+  }
+
+  .sale h1 {
+    font-size: 70px;
+  }
+
+  .expo-card-right {
+    padding: 134px 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .medical-tourism__hero-card .center {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .medical-tourism__hero-card .center {
+    font-size: 190px;
+  }
+
+  .medical-tourism__hero-card {
+    width: 30%;
+  }
+
+  .expo-card-right {
+    padding: 90px 70px;
+  }
+
+  .expo-card-left,
+  .expo-card-right {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .medical-tourism__hero-card .center {
+    font-size: 170px;
+  }
+
+  .medical-tourism__title {
+	margin-right: 50px;
+  }
 }

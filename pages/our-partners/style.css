@@ -21,7 +21,7 @@
 .partners__card {
   border-radius: 90px;
   background: #fff;
-  width: 408px;
+  max-width: 408px;
   height: 312px;
   flex-shrink: 0;
   position: relative;
@@ -66,4 +66,30 @@
   font-weight: 600;
   line-height: normal;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1600px) {
+  .partners__card {
+    height: 230px;
+  }
+
+  .partners__card img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .partners__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .partners__card img {
+	max-width: 250px;
+ }
+}
+
+@media (max-width: 1200px) {
+  .partners__card img {
+    max-width: 220px;
+  }
 }
