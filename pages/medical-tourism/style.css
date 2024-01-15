@@ -10,7 +10,6 @@
 
 .medical-tourism__hero {
   display: flex;
-  grid-template-columns: repeat(3, 1fr);
   flex-direction: row;
   justify-content: space-between;
 }
@@ -20,21 +19,21 @@
   display: flex;
   flex-direction: column;
   z-index: 1;
-  width: 33%;
+  width: 28%;
   padding: 55px 0 10px;
-}
-
-.medical-tourism__hero-card::before {
-  content: "";
-  position: absolute;
-  width: 85%;
-  height: 100%;
+  align-items: center;
   border-radius: 50px;
   background: linear-gradient(180deg, #3ee26c 0%, rgba(62, 226, 108, 0) 100%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+}
+
+.medical-tourism__hero-card:nth-child(2) {
+  border-radius: 50px;
+  background: linear-gradient(180deg, #72ea93 0%, rgba(62, 226, 108, 0) 100%);
+}
+
+.medical-tourism__hero-card:last-child {
+  border-radius: 50px;
+  background: linear-gradient(180deg, #e0f6a0 0%, rgba(62, 226, 108, 0) 100%);
 }
 
 .medical-tourism__hero-card .top {
