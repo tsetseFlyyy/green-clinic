@@ -248,6 +248,10 @@
   .expo-card-right {
     height: 670px;
   }
+
+  .sale h1 {
+	font-size: 80px;
+ }
 }
 
 @media (max-width: 1400px) {
