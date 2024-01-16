@@ -36,6 +36,21 @@ a {
   text-decoration: none;
 }
 
+.breadcrumbs {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(-50px); /* Начальное значение смещения вниз */
+  animation: slide-down 1s ease-in-out forwards;
+}
+
+@keyframes slide-down {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
 .breadcrumbs a {
   margin-right: 50px;
 }
@@ -69,6 +84,12 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.animation-title {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(-50px); /* Начальное значение смещения вниз */
+  animation: slide-down 1s ease-in-out forwards;
 }
 
 .orange {
