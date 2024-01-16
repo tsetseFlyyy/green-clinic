@@ -6,18 +6,29 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="text" id="searchInput" placeholder="placeholder" />
     <script>
-      for (let i = 1; i <= 1200; i++) {
-        if (i == 300) {
-          console.log(i);
+      var searchInput = document.getElementById("searchInput");
+
+      var searchInputValue;
+
+      searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          searchInputValue = event.target.value;
+          console.log("Enter key pressed", searchInputValue);
+
+          var urlParams = new URLSearchParams();
+          urlParams.set("search", event.target.value);
+
+          // Сформировать новый URL с параметрами
+          var newUrl =
+            "file:///D:/Software/green%20clinic/pages/search/index.html?" +
+            urlParams.toString();
+
+          // Перейти на новую страницу
+          window.location.href = newUrl;
         }
-        if (i == 700) {
-          console.log(i);
-        }
-        if (i == 1100) {
-          console.log(i);
-        }
-      }
+      });
     </script>
   </body>
 </html>

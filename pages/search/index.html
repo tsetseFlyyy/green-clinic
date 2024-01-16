@@ -41,7 +41,7 @@
               stroke-linecap="round"
             />
           </svg>
-          <input type="text" placeholder="Найти..." />
+          <input id="searchInput" type="text" placeholder="Найти..." />
         </div>
       </div>
       <div class="search__results-container" id="search__results-container">
@@ -53,7 +53,7 @@
             <span>Поликлиника платная</span>
           </div>
         </div>
-        <div class="search__results">
+        <div class="search__results" id="search__results">
           <div class="search__results-service">
             <div class="search__service">
               <p class="search__service-id">070201</p>
@@ -105,22 +105,6 @@
 
       const osmsFilter = document.getElementById("osmsFilter");
       const paidFilter = document.getElementById("paidFilter");
-
-      osmsFilter.addEventListener("click", () => {
-        type = "osms";
-        console.log(type);
-
-        paidFilter.classList.remove("chosen");
-        osmsFilter.classList.add("chosen");
-      });
-
-      paidFilter.addEventListener("click", () => {
-        type = "paid";
-        console.log(type);
-
-        osmsFilter.classList.remove("chosen");
-        paidFilter.classList.add("chosen");
-      });
 
       const objects = [
         {
@@ -182,6 +166,71 @@
           price_paid: 175,
         },
       ];
+
+      const searchResults = document.getElementById("search__results");
+
+      var searchInput = document.getElementById("searchInput");
+
+      var searchInputValue;
+
+      searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          searchInputValue = event.target.value;
+          console.log("Enter key pressed", searchInputValue);
+        }
+      });
+
+      osmsFilter.addEventListener("click", () => {
+        type = "osms";
+        console.log(type);
+
+        paidFilter.classList.remove("chosen");
+        osmsFilter.classList.add("chosen");
+
+        searchResults.innerHTML = "";
+
+        for (let i = 0; i < objects.length; i++) {
+          if (objects[i].type == "osms" || objects[i].type == "both") {
+            let searchResultsService = `
+				<div class="search__results-service">
+				  <div class="search__service">
+					 <p class="search__service-id">${objects[i].id}</p>
+					 <p class="search__service-name">${objects[i].name}</p>
+				  </div>
+				  <h3 class="search__results-price">${objects[i].price_osms} kzt</h3>
+				</div>
+				`;
+
+            searchResults.innerHTML += searchResultsService;
+          }
+        }
+      });
+
+      paidFilter.addEventListener("click", () => {
+        type = "paid";
+        console.log(type);
+
+        osmsFilter.classList.remove("chosen");
+        paidFilter.classList.add("chosen");
+
+        searchResults.innerHTML = "";
+
+        for (let i = 0; i < objects.length; i++) {
+          if (objects[i].type == "paid" || objects[i].type == "both") {
+            let searchResultsService = `
+			 <div class="search__results-service">
+            <div class="search__service">
+              <p class="search__service-id">${objects[i].id}</p>
+              <p class="search__service-name">${objects[i].name}</p>
+            </div>
+            <h3 class="search__results-price">${objects[i].price_paid} kzt</h3>
+          </div>
+			 `;
+
+            searchResults.innerHTML += searchResultsService;
+          }
+        }
+      });
     </script>
   </body>
 </html>

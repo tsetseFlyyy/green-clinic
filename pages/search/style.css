@@ -72,6 +72,7 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 16px;
+  width: 100%;
 }
 
 .search__input input::placeholder {
