@@ -31,7 +31,7 @@
           >
         </a>
       </div>
-      <div class="osms__card card mt-60">
+      <div class="osms__card first-osms__card card mt-60">
         <div class="osms__card-headline">
           <svg
             width="48"
@@ -59,7 +59,7 @@
           у участкового врача нашей Клиники
         </p>
       </div>
-      <div class="osms__card card mt-60">
+      <div class="osms__card second-osms__card card mt-60">
         <div class="osms__card-headline">
           <svg
             width="48"
@@ -87,7 +87,7 @@
           рамках системы ОСМС Вы можете получить у своего участкового врача.
         </p>
       </div>
-      <div class="osms__card card mt-60">
+      <div class="osms__card third-osms__card card mt-60">
         <div class="osms__card-headline">
           <svg
             width="48"
@@ -116,5 +116,66 @@
         </p>
       </div>
     </section>
+    <script>
+      var osmsCard1 = document.querySelector(".first-osms__card");
+      var osmsCard2 = document.querySelector(".second-osms__card");
+      var osmsCard3 = document.querySelector(".third-osms__card");
+      var animation1Triggered = false;
+      var animation2Triggered = false;
+      var animation3Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerOsmsCard1 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            osmsCard1.classList.add("visible");
+            animation1Triggered = true;
+            observerOsmsCard1.unobserve(osmsCard1);
+          }
+        });
+      },
+      options);
+
+      observerOsmsCard1.observe(osmsCard1);
+
+      var observerOsmsCard2 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation2Triggered) {
+            osmsCard2.classList.add("visible");
+            animation2Triggered = true;
+            observerOsmsCard2.unobserve(osmsCard2);
+          }
+        });
+      },
+      options);
+
+      observerOsmsCard2.observe(osmsCard2);
+
+      var observerOsmsCard3 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation3Triggered) {
+            osmsCard3.classList.add("visible");
+            animation3Triggered = true;
+            observerOsmsCard3.unobserve(osmsCard3);
+          }
+        });
+      },
+      options);
+
+      observerOsmsCard3.observe(osmsCard3);
+    </script>
   </body>
 </html>
