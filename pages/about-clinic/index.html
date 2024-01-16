@@ -60,22 +60,33 @@
       </div>
     </section>
     <script>
-      var animatedElement = document.querySelector(".about-clinic__headline");
-      var animatedElement1 = document.querySelector(".about-clinic__text");
+      var animatedElementHeadline = document.querySelector(
+        ".about-clinic__headline"
+      );
+      var animatedElementText = document.querySelector(".about-clinic__text");
       var animationTriggered = false;
 
-      document.addEventListener("scroll", function () {
-        var scrollPosition = window.scrollY;
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
 
-        // Определите порог прокрутки, при котором вы хотите запустить анимацию
-        var scrollThreshold = 200;
+      var observerHeadline = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animationTriggered) {
+            animatedElementHeadline.classList.add("visible");
+            animatedElementText.classList.add("visible");
+            animationTriggered = true;
+            observerHeadline.unobserve(animatedElementHeadline);
+          }
+        });
+      },
+      options);
 
-        if (scrollPosition > scrollThreshold && !animationTriggered) {
-          animatedElement.classList.add("visible");
-          animatedElement1.classList.add("visible");
-          animationTriggered = true;
-        }
-      });
+      observerHeadline.observe(animatedElementHeadline);
     </script>
   </body>
 </html>

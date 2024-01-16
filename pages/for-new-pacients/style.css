@@ -14,6 +14,60 @@
   padding: 85px 79px;
 }
 
+.first-green-card {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
+.first-transparent-card {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  animation: slide-up 1.4s ease-in-out forwards;
+}
+
+.second-green-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.second-green-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.third-green-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.third-green-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.third-transparent-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.third-transparent-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .green-card h2 {
   color: #fff;
   font-family: Geologica;
@@ -39,6 +93,17 @@
   border: 1px solid #0f8f5d;
   padding: 81px 101px;
   margin-top: 60px;
+}
+
+.second-transparent-card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.second-transparent-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .transparent-card h2 {

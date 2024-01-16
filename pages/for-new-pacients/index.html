@@ -17,8 +17,10 @@
           <span>Новым пациентам</span>
         </a>
       </div>
-      <h1 class="for-new-pacients__title title">Новым пациентам</h1>
-      <div class="green-card">
+      <h1 class="for-new-pacients__title title animation-title">
+        Новым пациентам
+      </h1>
+      <div class="green-card first-green-card">
         <h2>Уважаемые пациенты!</h2>
         <p>
           При получении медицинских услуг важным моментом является идентификация
@@ -32,7 +34,7 @@
           оформления и выдачи медицинских документов в нашей Клинике.
         </p>
       </div>
-      <div class="transparent-card">
+      <div class="transparent-card first-transparent-card">
         <div class="transparent-card-headline">
           <div class="transparent-card-number">
             <svg
@@ -167,14 +169,14 @@
           </div>
         </div>
       </div>
-      <div class="green-card mt-60">
+      <div class="green-card second-green-card mt-60">
         <h2>При отсутствии вышеуказанных документов</h2>
         <p>
           Клиника не вправе оказывать медицинские услуги пациентам, не прошедшим
           идентификацию.
         </p>
       </div>
-      <div class="transparent-card">
+      <div class="transparent-card second-transparent-card">
         <div class="transparent-card-headline">
           <div class="transparent-card-number">
             <svg
@@ -293,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div class="green-card mt-60">
+      <div class="green-card third-green-card mt-60">
         <h2>
           В случае отказа пациента от подписания информированного согласия
         </h2>
@@ -302,7 +304,7 @@
           инвазивные процедуры.
         </p>
       </div>
-      <div class="transparent-card">
+      <div class="transparent-card third-transparent-card">
         <div class="transparent-card-headline">
           <div class="transparent-card-number">
             <svg
@@ -391,5 +393,85 @@
         </div>
       </div>
     </section>
+    <script>
+      var animatedGreenCard2 = document.querySelector(".second-green-card");
+      var animatedTransparentCard2 = document.querySelector(
+        ".second-transparent-card"
+      );
+      var animatedGreenCard3 = document.querySelector(".third-green-card");
+      var animatedTransparentCard3 = document.querySelector(
+        ".third-transparent-card"
+      );
+      var animation1Triggered = false;
+      var animation2Triggered = false;
+      var animation3Triggered = false;
+      var animation4Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerGreencard2 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            animatedGreenCard2.classList.add("visible");
+            animation1Triggered = true;
+            observerHeadline.unobserve(animatedGreenCard2);
+          }
+        });
+      },
+      options);
+
+      var observerTransparentCard2 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation2Triggered) {
+            animatedTransparentCard2.classList.add("visible");
+            animation2Triggered = true;
+            observerHeadline.unobserve(animatedTransparentCard2);
+          }
+        });
+      },
+      options);
+
+      var observerGreencard3 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation3Triggered) {
+            animatedGreenCard3.classList.add("visible");
+            animation3Triggered = true;
+            observerHeadline.unobserve(animatedGreenCard2);
+          }
+        });
+      },
+      options);
+
+      var observerTransparentCard3 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation4Triggered) {
+            animatedTransparentCard3.classList.add("visible");
+            animation4Triggered = true;
+            observerHeadline.unobserve(animatedTransparentCard2);
+          }
+        });
+      },
+      options);
+
+      observerGreencard2.observe(animatedGreenCard2);
+      observerTransparentCard2.observe(animatedTransparentCard2);
+      observerGreencard3.observe(animatedGreenCard3);
+      observerTransparentCard3.observe(animatedTransparentCard3);
+    </script>
   </body>
 </html>
