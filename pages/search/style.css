@@ -1,0 +1,200 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.search__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.search__container {
+  border-radius: 90px;
+  background: #27ae79;
+  padding: 52px 56px;
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
+.search__container h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*.search__container input {
+  border-radius: 90px;
+  background: #fff;
+  padding: 37px 22px;
+  width: 100%;
+  margin-top: 15px;
+  outline: none;
+  color: #004c2e;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+}*/
+
+.search__input {
+  margin-top: 15px;
+  border-radius: 90px;
+  background: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 37px 22px;
+}
+
+.search__input input {
+  border: none;
+  border-radius: 90px;
+  color: #004c2e;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  outline: none;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 16px;
+}
+
+.search__input input::placeholder {
+  color: #004c2e;
+}
+
+.search__filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.search__filter {
+  border-radius: 108px;
+  background: #27ae79;
+  padding: 20px;
+}
+
+.filter-one {
+  margin-right: 5px;
+}
+
+.search__filter span {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
+.chosen {
+  border-radius: 108px;
+  background: #ffca79;
+}
+
+.chosen span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
+.search__filters-green {
+  border-radius: 108px;
+  background: #27ae79;
+}
+
+.search__filters-green span {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
+.search__results {
+  border-radius: 90px;
+  background: #fff;
+  padding: 62px 58px;
+  margin-top: 20px;
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+.search__results-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 43px;
+}
+
+.search__service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.search__service-id {
+  color: var(--939598, #939598);
+  font-family: Geologica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 25px;
+}
+
+.search__service-name {
+  color: var(--0F1721, #0f1721);
+  font-family: Geologica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.search__results-price {
+  color: var(--0F1721, #0f1721);
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.search__results-service:last-child {
+  margin-bottom: 0;
+}
+
+.search__results-container {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.search__results-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

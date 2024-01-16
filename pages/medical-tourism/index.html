@@ -44,7 +44,6 @@
         </div>
       </div>
       <div class="expo-card">
-        <!--<img class="expo-card-left" src="../../images/expo.png" alt="" />-->
         <div class="expo-card-left"></div>
         <div class="expo-card-right">
           <ul>
@@ -143,6 +142,7 @@
         });
       });
       var expoCard = document.querySelector(".expo-card");
+      var expoCardRight = document.querySelector(".expo-card-right");
       var forForeignPacients = document.querySelector(".for-foreign-patients");
       var greenCard = document.querySelector(".green-card");
       var sale = document.querySelector(".sale");
@@ -164,6 +164,7 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting && !animation1Triggered) {
             expoCard.classList.add("visible");
+            expoCardRight.classList.add("visible");
             animation1Triggered = true;
             observerExpoCard.unobserve(expoCard);
           }
@@ -205,10 +206,7 @@
 
       observerGreenCard.observe(greenCard);
 
-      var observerSale = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
+      var observerSale = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting && !animation4Triggered) {
             sale.classList.add("visible");
@@ -216,8 +214,7 @@
             observerSale.unobserve(sale);
           }
         });
-      },
-      options);
+      }, options);
 
       observerSale.observe(sale);
     </script>

@@ -136,15 +136,27 @@
   height: 573px;
 }
 
+@media (max-width: 1400px) {
+  .expo-card-left {
+    background-position: right;
+  }
+}
+
 .expo-card-right {
   border-radius: 90px;
   background: #fff;
   padding: 134px 144px;
   width: 55%;
   position: absolute;
-  right: 0;
+  /*right: 0;*/
+  right: 45%;
   z-index: 2;
   height: 573px;
+}
+
+.expo-card-right.visible {
+  right: 0;
+  transition: 1.25s ease-in-out;
 }
 
 .expo-card-right li {

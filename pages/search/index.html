@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Поиск</title>
+  </head>
+  <body>
+    <section class="search section container">
+      <div class="breadcrumbs">
+        <a href="#">
+          <span>Главная</span>
+        </a>
+        <a href="#">
+          <span>Поиск</span>
+        </a>
+      </div>
+      <h1 class="search__title animation-title title">Поиск</h1>
+      <div class="search__container">
+        <h2>Направление и услуги</h2>
+        <div class="search__input">
+          <svg
+            width="26"
+            height="24"
+            viewBox="0 0 26 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="11.6757"
+              cy="11"
+              rx="6.32411"
+              ry="6"
+              stroke="#004C2E"
+            />
+            <path
+              d="M21.1611 20L17.999 17"
+              stroke="#004C2E"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input type="text" placeholder="Найти..." />
+        </div>
+      </div>
+      <div class="search__results-container" id="search__results-container">
+        <div class="search__filters mt-60">
+          <div class="search__filter filter-one pointer chosen" id="osmsFilter">
+            <span>Поликлиника ОСМС</span>
+          </div>
+          <div class="search__filter pointer" id="paidFilter">
+            <span>Поликлиника платная</span>
+          </div>
+        </div>
+        <div class="search__results">
+          <div class="search__results-service">
+            <div class="search__service">
+              <p class="search__service-id">070201</p>
+              <p class="search__service-name">Ручное обследование матки</p>
+            </div>
+            <h3 class="search__results-price">12 000 kzt</h3>
+          </div>
+          <div class="search__results-service">
+            <div class="search__service">
+              <p class="search__service-id">070201</p>
+              <p class="search__service-name">Ручное обследование матки</p>
+            </div>
+            <h3 class="search__results-price">12 000 kzt</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const searchResultsContainer = document.getElementById(
+        "search__results-container"
+      );
+      var animation1Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerSearchResultsContainer = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            searchResultsContainer.classList.add("visible");
+            animation1Triggered = true;
+            observerSearchResultsContainer.unobserve(searchResultsContainer);
+          }
+        });
+      },
+      options);
+
+      observerSearchResultsContainer.observe(searchResultsContainer);
+
+      // searching
+
+      let type = "osms";
+      console.log("osms");
+
+      const osmsFilter = document.getElementById("osmsFilter");
+      const paidFilter = document.getElementById("paidFilter");
+
+      osmsFilter.addEventListener("click", () => {
+        type = "osms";
+        console.log(type);
+
+        paidFilter.classList.remove("chosen");
+        osmsFilter.classList.add("chosen");
+      });
+
+      paidFilter.addEventListener("click", () => {
+        type = "paid";
+        console.log(type);
+
+        osmsFilter.classList.remove("chosen");
+        paidFilter.classList.add("chosen");
+      });
+
+      const objects = [
+        {
+          id: 1,
+          name: "Product A",
+          type: "osms",
+          price_osms: 0,
+          price_paid: null,
+        },
+        {
+          id: 2,
+          name: "Service X",
+          type: "paid",
+          price_osms: null,
+          price_paid: 150,
+        },
+        { id: 3, name: "Item Z", type: "both", price_osms: 0, price_paid: 120 },
+        {
+          id: 4,
+          name: "Product B",
+          type: "both",
+          price_osms: 0,
+          price_paid: 180,
+        },
+        {
+          id: 5,
+          name: "Software Y",
+          type: "osms",
+          price_osms: 0,
+          price_paid: null,
+        },
+        {
+          id: 6,
+          name: "Service M",
+          type: "paid",
+          price_osms: null,
+          price_paid: 200,
+        },
+        {
+          id: 7,
+          name: "Gadget C",
+          type: "osms",
+          price_osms: 0,
+          price_paid: null,
+        },
+        {
+          id: 8,
+          name: "Product D",
+          type: "paid",
+          price_osms: null,
+          price_paid: 160,
+        },
+        { id: 9, name: "Tool N", type: "both", price_osms: 0, price_paid: 140 },
+        {
+          id: 10,
+          name: "Service P",
+          type: "paid",
+          price_osms: null,
+          price_paid: 175,
+        },
+      ];
+    </script>
+  </body>
+</html>
