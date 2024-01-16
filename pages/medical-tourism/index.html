@@ -9,7 +9,7 @@
   </head>
   <body>
     <section class="medical-tourism section container">
-      <div class="title-wrapper">
+      <div class="title-wrapper animation-title">
         <h1 class="medical-tourism__title title">Медицинский туризм</h1>
         <p>
           Нашей Клинике доверяют и иностранные пациенты, как проживающие в
@@ -20,19 +20,19 @@
       <div class="medical-tourism__hero">
         <div class="medical-tourism__hero-card">
           <p class="top visibility-hidden">*</p>
-          <p class="center">5</p>
+          <p class="center" id="counter1">5</p>
           <p class="bottom">лет</p>
         </div>
         <div class="medical-tourism__hero-card second">
           <div>
             <p class="top">более</p>
-            <p class="center">100</p>
+            <p class="center" id="counter2">0</p>
             <p class="bottom">иностранных пациентов</p>
           </div>
         </div>
         <div class="medical-tourism__hero-card third">
           <p class="top visibility-hidden">*</p>
-          <p class="center">20</p>
+          <p class="center" id="counter3">20</p>
           <p class="bottom">
             стран
             <br />
@@ -64,30 +64,32 @@
           <h2>Во время медицинских процедур в Green Clinic.</h2>
         </div>
       </div>
-      <h1 class="medical-tourism__title title second-title">
-        Иностранным пациентам:
-      </h1>
-      <p class="medical-tourism__description-one">
-        В штате Клиники имеется англоговорящий врач (перечислить регалии
-        Чимбаевой Г.Н. в том числе регалии ООН). Мы сотрудничаем с такими
-        компаниями, как:
-      </p>
-      <div class="companies">
-        <img src="../../images/kazunion.png" alt="kazunion" />
-        <img src="../../images/atlas.png" alt="atlas" />
+      <div class="for-foreign-patients">
+        <h1 class="medical-tourism__title title second-title">
+          Иностранным пациентам:
+        </h1>
+        <p class="medical-tourism__description-one">
+          В штате Клиники имеется англоговорящий врач (перечислить регалии
+          Чимбаевой Г.Н. в том числе регалии ООН). Мы сотрудничаем с такими
+          компаниями, как:
+        </p>
+        <div class="companies">
+          <img src="../../images/kazunion.png" alt="kazunion" />
+          <img src="../../images/atlas.png" alt="atlas" />
+        </div>
+        <p class="medical-tourism__description-two">
+          Или Вы можете оставить заявку на нашем сайте. Обязательно в заявке
+          опишите предположительный диагноз, необходимую лечебную процедуру и
+          дату приезда. Вы можете самостоятельно выбрать удобный для себя
+          вариант проживания или обратиться в турфирмы, которые сотрудничают с
+          нашей Клиникой. Они смогут взять на себя все организационные моменты
+          поездки, начиная от оформления билетов и заканчивая ознакомительными
+          экскурсиями по северной столице. Для пациентов и сопровождающих их
+          лиц, прибывающих на стационарное лечение и check-up в green clinic в
+          рамках сотрудничества с отелем Windham Garden Astana мы можем
+          предложить скидку на проживание.
+        </p>
       </div>
-      <p class="medical-tourism__description-two">
-        Или Вы можете оставить заявку на нашем сайте. Обязательно в заявке
-        опишите предположительный диагноз, необходимую лечебную процедуру и дату
-        приезда. Вы можете самостоятельно выбрать удобный для себя вариант
-        проживания или обратиться в турфирмы, которые сотрудничают с нашей
-        Клиникой. Они смогут взять на себя все организационные моменты поездки,
-        начиная от оформления билетов и заканчивая ознакомительными экскурсиями
-        по северной столице. Для пациентов и сопровождающих их лиц, прибывающих
-        на стационарное лечение и check-up в green clinic в рамках
-        сотрудничества с отелем Windham Garden Astana мы можем предложить скидку
-        на проживание.
-      </p>
       <div class="green-card">
         <h1 class="title">Для иногородних пациентов Республики Казахстан:</h1>
         <p>
@@ -112,5 +114,112 @@
         <img src="../../images/wyndham-sale.png" alt="wyndham-sale" />
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var counters = [
+          document.getElementById("counter1"),
+          document.getElementById("counter2"),
+          document.getElementById("counter3"),
+        ];
+        var targetValues = [5, 100, 20];
+        var duration = 700;
+        var interval = 30;
+
+        counters.forEach(function (counter, index) {
+          var increment = targetValues[index] / (duration / interval);
+          var currentValue = 0;
+
+          function updateCounter() {
+            if (currentValue < targetValues[index]) {
+              currentValue += increment;
+              counter.textContent = Math.round(currentValue);
+              setTimeout(updateCounter, interval);
+            } else {
+              counter.textContent = targetValues[index];
+            }
+          }
+
+          updateCounter();
+        });
+      });
+      var expoCard = document.querySelector(".expo-card");
+      var forForeignPacients = document.querySelector(".for-foreign-patients");
+      var greenCard = document.querySelector(".green-card");
+      var sale = document.querySelector(".sale");
+
+      var animation1Triggered = false;
+      var animation2Triggered = false;
+      var animation3Triggered = false;
+      var animation4Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerExpoCard = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            expoCard.classList.add("visible");
+            animation1Triggered = true;
+            observerExpoCard.unobserve(expoCard);
+          }
+        });
+      },
+      options);
+
+      observerExpoCard.observe(expoCard);
+
+      var observerForForeignPacients = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation2Triggered) {
+            forForeignPacients.classList.add("visible");
+            animation2Triggered = true;
+            observerForForeignPacients.unobserve(forForeignPacients);
+          }
+        });
+      },
+      options);
+
+      observerForForeignPacients.observe(forForeignPacients);
+
+      var observerGreenCard = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation3Triggered) {
+            greenCard.classList.add("visible");
+            animation3Triggered = true;
+            observerGreenCard.unobserve(greenCard);
+          }
+        });
+      },
+      options);
+
+      observerGreenCard.observe(greenCard);
+
+      var observerSale = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation4Triggered) {
+            sale.classList.add("visible");
+            animation4Triggered = true;
+            observerSale.unobserve(sale);
+          }
+        });
+      },
+      options);
+
+      observerSale.observe(sale);
+    </script>
   </body>
 </html>
