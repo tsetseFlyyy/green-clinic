@@ -394,84 +394,79 @@
       </div>
     </section>
     <script>
-      var animatedGreenCard2 = document.querySelector(".second-green-card");
-      var animatedTransparentCard2 = document.querySelector(
-        ".second-transparent-card"
-      );
-      var animatedGreenCard3 = document.querySelector(".third-green-card");
-      var animatedTransparentCard3 = document.querySelector(
-        ".third-transparent-card"
-      );
-      var animation1Triggered = false;
-      var animation2Triggered = false;
-      var animation3Triggered = false;
-      var animation4Triggered = false;
-
-      var options = {
-        root: null,
-        threshold: 0.5,
-      };
-
-      var observerGreencard2 = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation1Triggered) {
-            animatedGreenCard2.classList.add("visible");
-            animation1Triggered = true;
-            observerGreencard2.unobserve(animatedGreenCard2);
-          }
-        });
-      },
-      options);
-
-      var observerTransparentCard2 = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation2Triggered) {
-            animatedTransparentCard2.classList.add("visible");
-            animation2Triggered = true;
-            observerTransparentCard2.unobserve(animatedTransparentCard2);
-          }
-        });
-      },
-      options);
-
-      var observerGreencard3 = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation3Triggered) {
-            animatedGreenCard3.classList.add("visible");
-            animation3Triggered = true;
-            observerGreencard3.unobserve(animatedGreenCard2);
-          }
-        });
-      },
-      options);
-
-      var observerTransparentCard3 = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation4Triggered) {
-            animatedTransparentCard3.classList.add("visible");
-            animation4Triggered = true;
-            observerTransparentCard3.unobserve(animatedTransparentCard2);
-          }
-        });
-      },
-      options);
-
-      observerGreencard2.observe(animatedGreenCard2);
-      observerTransparentCard2.observe(animatedTransparentCard2);
-      observerGreencard3.observe(animatedGreenCard3);
-      observerTransparentCard3.observe(animatedTransparentCard3);
-    </script>
+		var animatedGreenCard2 = document.querySelector(".second-green-card");
+		var animatedTransparentCard1 = document.querySelector(".first-transparent-card");
+		var animatedTransparentCard2 = document.querySelector(".second-transparent-card");
+		var animatedGreenCard3 = document.querySelector(".third-green-card");
+		var animatedTransparentCard3 = document.querySelector(".third-transparent-card");
+	 
+		var animation0Triggered = false;
+		var animation1Triggered = false;
+		var animation2Triggered = false;
+		var animation3Triggered = false;
+		var animation4Triggered = false;
+	 
+		var options = {
+		  root: null,
+		  threshold: 0.5,
+		};
+	 
+		var observerTransparentCard1 = new IntersectionObserver(function (entries, observer) {
+		  entries.forEach(function (entry) {
+			 if (entry.isIntersecting && !animation0Triggered) {
+				animatedTransparentCard1.classList.add("visible");
+				animation0Triggered = true;
+				observerTransparentCard1.unobserve(animatedTransparentCard1);
+			 }
+		  });
+		}, options);
+	 
+		var observerGreencard2 = new IntersectionObserver(function (entries, observer) {
+		  entries.forEach(function (entry) {
+			 if (entry.isIntersecting && !animation1Triggered) {
+				animatedGreenCard2.classList.add("visible");
+				animation1Triggered = true;
+				observerGreencard2.unobserve(animatedGreenCard2);
+			 }
+		  });
+		}, options);
+	 
+		var observerTransparentCard2 = new IntersectionObserver(function (entries, observer) {
+		  entries.forEach(function (entry) {
+			 if (entry.isIntersecting && !animation2Triggered) {
+				animatedTransparentCard2.classList.add("visible");
+				animation2Triggered = true;
+				observerTransparentCard2.unobserve(animatedTransparentCard2);
+			 }
+		  });
+		}, options);
+	 
+		var observerGreencard3 = new IntersectionObserver(function (entries, observer) {
+		  entries.forEach(function (entry) {
+			 if (entry.isIntersecting && !animation3Triggered) {
+				animatedGreenCard3.classList.add("visible");
+				animation3Triggered = true;
+				observerGreencard3.unobserve(animatedGreenCard3);
+			 }
+		  });
+		}, options);
+	 
+		var observerTransparentCard3 = new IntersectionObserver(function (entries, observer) {
+		  entries.forEach(function (entry) {
+			 if (entry.isIntersecting && !animation4Triggered) {
+				animatedTransparentCard3.classList.add("visible");
+				animation4Triggered = true;
+				observerTransparentCard3.unobserve(animatedTransparentCard3);
+			 }
+		  });
+		}, options);
+	 
+		observerTransparentCard1.observe(animatedTransparentCard1);
+		observerGreencard2.observe(animatedGreenCard2);
+		observerTransparentCard2.observe(animatedTransparentCard2);
+		observerGreencard3.observe(animatedGreenCard3);
+		observerTransparentCard3.observe(animatedTransparentCard3);
+	 </script>
+	 
   </body>
 </html>

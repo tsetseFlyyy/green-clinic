@@ -32,7 +32,12 @@
 .first-transparent-card {
   opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
   transform: translateY(100px); /* Начальное значение смещения вниз */
-  animation: slide-up 1.4s ease-in-out forwards;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.first-transparent-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .second-green-card {
