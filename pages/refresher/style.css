@@ -1,0 +1,153 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.refresher__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.refresher__green-card {
+  border-radius: 90px;
+  background: #27ae79;
+  padding: 84px 79px;
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
+.refresher__green-card h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.refresher__green-card p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.refresher__cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.refresher__cards-row:first-child {
+  margin-top: 0;
+}
+
+.refresher__card {
+  border-radius: 90px;
+  background-color: #04633e;
+  background-image: url("../../images/refresher-bg-card.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 75px 71px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;	
+}
+
+.refresher__card h3 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.72px;
+  margin: 0 10px;
+}
+
+.first-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.first-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.second-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.third-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.third-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fourth-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.fourth-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fifth-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.fifth-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sixth-row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.sixth-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
