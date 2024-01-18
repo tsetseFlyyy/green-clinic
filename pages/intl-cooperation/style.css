@@ -1,0 +1,120 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.doctors {
+  min-height: 100vh;
+}
+
+.doctors__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.doctors__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(150px);
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.doctors__card-photo {
+  width: 100%;
+  min-height: 494px;
+  flex-shrink: 0;
+  border-radius: 90px 90px 90px 20px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.doctors__card-name {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+.doctors__card-position {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 9px;
+}
+
+.doctors__card-from {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: normal;
+}
+
+.doctors__card-country {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 28px;
+}
+
+.doctors__card-flag {
+  width: 38px !important;
+  height: 19px !important;
+  margin-right: 31px;
+}
+
+@media (max-width: 1600px) {
+  .doctors__container {
+    gap: 30px;
+  }
+  .doctors__card-photo {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .doctors__card-photo {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .doctors__card-photo {
+    min-height: 310px;
+  }
+  .doctors__container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .doctors__card-photo {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .doctors__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .doctors__card-photo {
+    min-height: 330px;
+  }
+}
