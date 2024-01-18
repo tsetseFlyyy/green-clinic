@@ -72,36 +72,52 @@
       </div>
     </section>
     <script>
-      const searchResultsContainer = document.getElementById(
-        "search__results-container"
-      );
-      var animation1Triggered = false;
+      // animation
+      (function animation() {
+        const searchResultsContainer = document.getElementById(
+          "search__results-container"
+        );
+        var animation1Triggered = false;
 
-      var options = {
-        root: null,
-        threshold: 0.5,
-      };
+        var options = {
+          root: null,
+          threshold: 0.5,
+        };
 
-      var observerSearchResultsContainer = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation1Triggered) {
-            searchResultsContainer.classList.add("visible");
-            animation1Triggered = true;
-            observerSearchResultsContainer.unobserve(searchResultsContainer);
-          }
-        });
-      },
-      options);
+        var observerSearchResultsContainer = new IntersectionObserver(function (
+          entries,
+          observer
+        ) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !animation1Triggered) {
+              searchResultsContainer.classList.add("visible");
+              animation1Triggered = true;
+              observerSearchResultsContainer.unobserve(searchResultsContainer);
+            }
+          });
+        },
+        options);
 
-      observerSearchResultsContainer.observe(searchResultsContainer);
+        observerSearchResultsContainer.observe(searchResultsContainer);
+      })();
+
+      // get params
+
+      function getParams() {
+        const parsedUrl = new URL(window.location.href);
+
+        // Get the value of the 'search' parameter
+        const searchParamValue = parsedUrl.searchParams.get("search");
+
+        // Print the value of the 'search' parameter
+
+        return searchParamValue;
+      }
 
       // searching
 
       let type = "osms";
-      console.log("osms");
+      //console.log("type", type);
 
       const osmsFilter = document.getElementById("osmsFilter");
       const paidFilter = document.getElementById("paidFilter");
@@ -154,6 +170,7 @@
           id: 8,
           name: "Product D",
           type: "paid",
+          direction: "",
           price_osms: null,
           price_paid: 160,
         },
@@ -171,12 +188,79 @@
 
       var searchInput = document.getElementById("searchInput");
 
+      document.addEventListener("DOMContentLoaded", (event) => {
+        (function initInputValueFromParams() {
+          console.log("getParams", getParams());
+
+          searchResults.innerHTML = "";
+
+          if (getParams() != null && getParams() != "") {
+            for (let i = 0; i < objects.length; i++) {
+              if (objects[i].type == "osms" || objects[i].type == "both") {
+                let searchResultsService = `
+							<div class="search__results-service">
+							  <div class="search__service">
+								 <p class="search__service-id">${objects[i].id}</p>
+								 <p class="search__service-name">${objects[i].name}</p>
+							  </div>
+							  <h3 class="search__results-price">${objects[i].price_osms} kzt</h3>
+							</div>
+							`;
+
+                searchResults.innerHTML += searchResultsService;
+              }
+            }
+          }
+        })();
+      });
+
       var searchInputValue;
 
       searchInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
           searchInputValue = event.target.value;
-          console.log("Enter key pressed", searchInputValue);
+
+          var urlParams = new URLSearchParams();
+          urlParams.set("search", event.target.value);
+
+          // Получение текущего URL
+          const currentUrl = window.location.href;
+
+          // Получение URLSearchParams из текущего URL
+          const currentUrlSearchParams = new URLSearchParams(
+            window.location.search
+          );
+
+          // Замена или добавление новых параметров
+          currentUrlSearchParams.set("search", event.target.value);
+
+          // Получение обновленной строки параметров
+          const updatedParamsString = currentUrlSearchParams.toString();
+
+          // Обновление URL без перезагрузки страницы
+          const newUrl = currentUrl.split("?")[0] + "?" + updatedParamsString;
+          history.pushState({ path: newUrl }, "", newUrl);
+
+          console.log("Enter key pressed", getParams());
+
+          searchResults.innerHTML = "";
+
+          if (getParams() != null && getParams() != "") {
+            for (let i = 0; i < 5; i++) {
+              let searchResultsService = `
+			  <div class="search__results-service">
+				 <div class="search__service">
+					<p class="search__service-id">${i}</p>
+					<p class="search__service-name">${getParams()}</p>
+					<p class="search__service-name"> | ${type}</p>
+				 </div>
+				 <h3 class="search__results-price">${i * 100} kzt</h3>
+			  </div>
+			  `;
+
+              searchResults.innerHTML += searchResultsService;
+            }
+          }
         }
       });
 
