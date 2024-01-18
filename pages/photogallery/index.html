@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Фотогалерея</title>
+  </head>
+  <body>
+    <section class="photogallery section container">
+      <div class="breadcrumbs">
+        <a href="#">
+          <span>Главная</span>
+        </a>
+        <a href="#">
+          <span>Фотогалерея</span>
+        </a>
+      </div>
+      <h1 class="photogallery__title title animation-title">Фотогалерея</h1>
+      <div class="photogallery__container" id="photogallery__container"></div>
+      <div id="modal">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let data = {
+        title: "Клиника",
+        photos: [
+          "../../images/photo.png",
+          "../../images/photo.png",
+          "../../images/photo.png",
+          "../../images/photo.png",
+          "../../images/photo.png",
+        ],
+      };
+
+      const photogalleryContainer = document.getElementById(
+        "photogallery__container"
+      );
+
+      const modal = document.getElementById("modal");
+
+      photogalleryContainer.innerHTML = "";
+
+      data.photos.map((photo, index) => {
+        let photoCard = `
+          <div class="photogallery__container-photo pointer">
+                <svg
+                  width="78"
+                  height="78"
+                  viewBox="0 0 78 78"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M65 65V65.75H65.75V65H65ZM49.2803 48.2197C48.9874 47.9268 48.5126 47.9268 48.2197 48.2197C47.9268 48.5126 47.9268 48.9874 48.2197 49.2803L49.2803 48.2197ZM64.25 45.5V65H65.75V45.5H64.25ZM65 64.25H45.5V65.75H65V64.25ZM65.5303 64.4697L49.2803 48.2197L48.2197 49.2803L64.4697 65.5303L65.5303 64.4697Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M13 65H12.25V65.75H13V65ZM29.7803 49.2803C30.0732 48.9874 30.0732 48.5126 29.7803 48.2197C29.4874 47.9268 29.0126 47.9268 28.7197 48.2197L29.7803 49.2803ZM12.25 45.5V65H13.75V45.5H12.25ZM13 65.75H32.5V64.25H13V65.75ZM13.5303 65.5303L29.7803 49.2803L28.7197 48.2197L12.4697 64.4697L13.5303 65.5303Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M65 13H65.75V12.25H65V13ZM48.2197 28.7197C47.9268 29.0126 47.9268 29.4874 48.2197 29.7803C48.5126 30.0732 48.9874 30.0732 49.2803 29.7803L48.2197 28.7197ZM65.75 32.5V13H64.25V32.5H65.75ZM65 12.25H45.5V13.75H65V12.25ZM64.4697 12.4697L48.2197 28.7197L49.2803 29.7803L65.5303 13.5303L64.4697 12.4697Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M13 13V12.25H12.25V13H13ZM28.7197 29.7803C29.0126 30.0732 29.4874 30.0732 29.7803 29.7803C30.0732 29.4874 30.0732 29.0126 29.7803 28.7197L28.7197 29.7803ZM13.75 32.5V13H12.25V32.5H13.75ZM13 13.75H32.5V12.25H13V13.75ZM12.4697 13.5303L28.7197 29.7803L29.7803 28.7197L13.5303 12.4697L12.4697 13.5303Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+          `;
+
+        photogalleryContainer.innerHTML += photoCard;
+
+        photogalleryContainer.children[index].addEventListener(
+          "click",
+          function () {
+            modal.style.display = "flex";
+            console.log("dsadwa");
+          }
+        );
+        console.log(photogalleryContainer.children);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      //  allowSlideNext: false,
+      //  allowSlidePrev: false,
+      //  allowTouchMove: false,
+      });
+    </script>
+  </body>
+</html>
