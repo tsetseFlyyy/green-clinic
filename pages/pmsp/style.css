@@ -1,0 +1,246 @@
+.section {
+  background-image: url("../../images/pmsp-bg.png");
+  padding-bottom: 164px;
+}
+
+.pmsp__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.roulets {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slide-up 1s ease-in-out forwards;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.roulet {
+  border-radius: 90px;
+  position: relative;
+  /*max-width: 1431px;*/
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*background-color: #04633e;*/
+}
+
+.roulet:last-child {
+  margin-right: 0;
+}
+
+.roulet__preview {
+  border-radius: 173px;
+  background: #2db982;
+  width: fit-content;
+  padding: 60px 45px;
+  position: relative;
+  z-index: 2;
+}
+
+.roulet__preview-underlay {
+  background-color: #04633e;
+  border-radius: 173px 0 0 173px;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.99s ease-in-out;
+}
+
+.roulet__preview-underoverlay {
+  background-color: #2db982;
+  border-radius: 173px;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.roulet__preview-num {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: normal;
+}
+
+.roulet__preview-svg {
+  margin-top: 19px;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.roulet__preview-text {
+  writing-mode: sideways-lr;
+  margin-top: 59px;
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.roulet__postview {
+  background-color: #04633e;
+  background-image: url("../../images/pin-item.png");
+  background-size: cover;
+  /*background-position: right;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 90px 90px 0;
+  top: 0;
+  z-index: auto;
+  overflow: hidden;
+  width: 0;
+  transition: 1s ease-in-out;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.roulet__postview-content {
+  margin-left: 145px;
+  /*max-width: 45%;*/
+  width: 601px;
+  /*opacity: 0;*/
+  transition: 1s ease-in-out;
+}
+
+.opacity-full {
+	opacity: 100%;
+}
+
+.roulet__content-title {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.roulet__postview-content ul {
+  margin-top: 25px;
+}
+
+.roulet__postview-content li {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 156.25% */
+}
+
+.roulet__postview-content li:first-child {
+  margin-top: 0;
+}
+
+.map-show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.map-show svg {
+  margin-right: 10px;
+}
+
+.map-show p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.roulet__content-subtitle {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  /*line-height: 25px;*/
+  margin-top: 16px;
+}
+
+.roulet__content-description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 156.25% */
+  margin-top: 25px;
+}
+
+.roulet__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.roulet__button {
+  width: 290px;
+  text-align: center;
+}
+
+.roulet__buttons-yellow {
+  border-radius: 108px;
+  background: #ffca79;
+  padding: 20px;
+}
+
+.roulet__buttons-yellow span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
+.roulet__buttons-green {
+  border-radius: 108px;
+  background: #2db982;
+  padding: 20px;
+}
+
+.roulet__buttons-green span {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
