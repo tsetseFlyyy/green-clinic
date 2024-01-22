@@ -1,6 +1,6 @@
 .section {
   background-image: url("../../images/contacts-bg.jpg");
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 164px;
 }
 
