@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Фотогалерея</title>
@@ -22,387 +18,69 @@
         </a>
       </div>
       <h1 class="photogallery__title title animation-title">Фотогалерея</h1>
-      <div class="content-wrapper">
-        <div class="subtitle__container">
-          <h3 сlass="photogallery__subtitle" id="photogallery__subtitle"></h3>
-          <p class="photogallery__length"></p>
-        </div>
-        <div class="photogallery__container" id="photogallery__container"></div>
-      </div>
-      <div id="modal">
-        <!--<div class="swiper-button-next"></div>-->
-        <!--<div class="swiper-button-prev"></div>-->
-        <div class="modal__content">
-			  <div class="swiper-title-container">
-				 <h3 class="swiper-title"></h3>
-				 <svg
-					class="close pointer"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				 >
-					<path
-					  d="M18 6L6 18"
-					  stroke="white"
-					  stroke-width="2"
-					  stroke-linecap="round"
-					  stroke-linejoin="round"
-					/>
-					<path
-					  d="M6 6L18 18"
-					  stroke="white"
-					  stroke-width="2"
-					  stroke-linecap="round"
-					  stroke-linejoin="round"
-					/>
-				 </svg>
-			  </div>
-          <div class="swiper-container">
-            <svg
-              class="button-prev pointer"
-              width="165"
-              height="164"
-              viewBox="0 0 165 164"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g filter="url(#filter0_dd_602_5861)">
-                <ellipse
-                  cx="82.5"
-                  cy="81.7252"
-                  rx="22.5"
-                  ry="21.6144"
-                  fill="white"
-                />
-              </g>
-              <path
-                d="M84.875 86.3608L80.125 81.6108L84.875 76.8608"
-                stroke="#0F1721"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_dd_602_5861"
-                  x="0"
-                  y="0.11084"
-                  width="165"
-                  height="163.229"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="10" dy="10" />
-                  <feGaussianBlur stdDeviation="25" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.0384375 0 0 0 0 0.341667 0 0 0 0 0.190052 0 0 0 1 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_602_5861"
-                  />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="-10" dy="-10" />
-                  <feGaussianBlur stdDeviation="25" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.23776 0 0 0 0 0.6875 0 0 0 0 0.46263 0 0 0 1 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="effect1_dropShadow_602_5861"
-                    result="effect2_dropShadow_602_5861"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect2_dropShadow_602_5861"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <!--<div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>
-					  <div class="swiper-slide"></div>-->
-              </div>
-            </div>
-            <svg
-              class="button-next pointer"
-              width="166"
-              height="165"
-              viewBox="0 0 166 165"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g filter="url(#filter0_dd_602_5866)">
-                <circle
-                  cx="82.832"
-                  cy="82.5"
-                  r="22.5"
-                  transform="rotate(180 82.832 82.5)"
-                  fill="#43BA7E"
-                />
-              </g>
-              <path
-                d="M80.125 77.8606L84.875 82.6106L80.125 87.3606"
-                stroke="white"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_dd_602_5866"
-                  x="0.332031"
-                  y="0"
-                  width="165"
-                  height="165"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="10" dy="10" />
-                  <feGaussianBlur stdDeviation="25" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.0384375 0 0 0 0 0.341667 0 0 0 0 0.190052 0 0 0 1 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_602_5866"
-                  />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="-10" dy="-10" />
-                  <feGaussianBlur stdDeviation="25" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.23776 0 0 0 0 0.6875 0 0 0 0 0.46263 0 0 0 1 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="effect1_dropShadow_602_5866"
-                    result="effect2_dropShadow_602_5866"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect2_dropShadow_602_5866"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-        </div>
-      </div>
+      <div class="photogallery__container" id="photogallery__container"></div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
-      let data = {
-        title: "Клиника",
-        photos: [
-          "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
-          "https://images.unsplash.com/photo-1672266908996-3f0f73c49954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDEyfHx8ZW58MHx8fHx8&w=1000&q=80",
-          "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-          "https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/pass/Gear-Photos-597589287.jpg",
-          "https://swiftdigital.com.au/wp-content/uploads/2021/06/free-online-photo-editors.jpg",
-        ],
-      };
+      let data = [
+        {
+          id: 1,
+          title: "Title 1",
+          img: "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+          photosLength: 15,
+        },
+        {
+          id: 2,
+          title: "Title 2",
+          img: "https://images.unsplash.com/photo-1672266908996-3f0f73c49954?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDEyfHx8ZW58MHx8fHx8&w=1000&q=80",
+          photosLength: 14,
+        },
+        {
+          id: 3,
+          title: "Title 3",
+          img: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+          photosLength: 13,
+        },
+        {
+          id: 4,
+          title: "Title 4",
+          img: "https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/pass/Gear-Photos-597589287.jpg",
+          photosLength: 12,
+        },
+        {
+          id: 5,
+          title: "Title 5",
+          img: "https://swiftdigital.com.au/wp-content/uploads/2021/06/free-online-photo-editors.jpg",
+          photosLength: 11,
+        },
+      ];
 
       const photogalleryContainer = document.getElementById(
         "photogallery__container"
       );
 
-      const modal = document.getElementById("modal");
-
       photogalleryContainer.innerHTML = "";
 
-      data.photos.forEach((photo, index) => {
-        let photoCard = `
-                <div class="photogallery__container-photo pointer">
-                      <svg
-                        width="78"
-                        height="78"
-                        viewBox="0 0 78 78"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M65 65V65.75H65.75V65H65ZM49.2803 48.2197C48.9874 47.9268 48.5126 47.9268 48.2197 48.2197C47.9268 48.5126 47.9268 48.9874 48.2197 49.2803L49.2803 48.2197ZM64.25 45.5V65H65.75V45.5H64.25ZM65 64.25H45.5V65.75H65V64.25ZM65.5303 64.4697L49.2803 48.2197L48.2197 49.2803L64.4697 65.5303L65.5303 64.4697Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M13 65H12.25V65.75H13V65ZM29.7803 49.2803C30.0732 48.9874 30.0732 48.5126 29.7803 48.2197C29.4874 47.9268 29.0126 47.9268 28.7197 48.2197L29.7803 49.2803ZM12.25 45.5V65H13.75V45.5H12.25ZM13 65.75H32.5V64.25H13V65.75ZM13.5303 65.5303L29.7803 49.2803L28.7197 48.2197L12.4697 64.4697L13.5303 65.5303Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M65 13H65.75V12.25H65V13ZM48.2197 28.7197C47.9268 29.0126 47.9268 29.4874 48.2197 29.7803C48.5126 30.0732 48.9874 30.0732 49.2803 29.7803L48.2197 28.7197ZM65.75 32.5V13H64.25V32.5H65.75ZM65 12.25H45.5V13.75H65V12.25ZM64.4697 12.4697L48.2197 28.7197L49.2803 29.7803L65.5303 13.5303L64.4697 12.4697Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M13 13V12.25H12.25V13H13ZM28.7197 29.7803C29.0126 30.0732 29.4874 30.0732 29.7803 29.7803C30.0732 29.4874 30.0732 29.0126 29.7803 28.7197L28.7197 29.7803ZM13.75 32.5V13H12.25V32.5H13.75ZM13 13.75H32.5V12.25H13V13.75ZM12.4697 13.5303L28.7197 29.7803L29.7803 28.7197L13.5303 12.4697L12.4697 13.5303Z"
-                          fill="white"
-                        />
-                      </svg>
-							 <div class="photo-overlay">
+      data.forEach((item, index) => {
+        let albumDiv = document.createElement("div");
+        albumDiv.classList.add("album");
+        albumDiv.classList.add("pointer");
+        albumDiv.innerHTML += `
+		  <div class="album-content">
+				<div class="album-text">
+				<p>${item.photosLength} фото</p>
+				<div class="album-title">
+					<h4>${item.title}</h4>
+					<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.832 9.5L16.1856 9.14645L16.5391 9.5L16.1856 9.85355L15.832 9.5ZM3.95703 10C3.68089 10 3.45703 9.77614 3.45703 9.5C3.45703 9.22386 3.68089 9 3.95703 9V10ZM11.4356 4.39645L16.1856 9.14645L15.4785 9.85355L10.7285 5.10355L11.4356 4.39645ZM16.1856 9.85355L11.4356 14.6036L10.7285 13.8964L15.4785 9.14645L16.1856 9.85355ZM15.832 10H3.95703V9H15.832V10Z" fill="white"/>
+</svg>
+</div>
+					</div>
+					</div>
+			`;
 
-								</div>
-                    </div>
-                `;
+			albumDiv.style.backgroundImage = `url('${item.img}')`;
 
-        photogalleryContainer.innerHTML += photoCard;
-      });
-
-      var swiper = new Swiper(".mySwiper", {
-        navigation: {
-          nextEl: ".button-next",
-          prevEl: ".button-prev",
-        },
-        // allowSlideNext: false,
-        // allowSlidePrev: false,
-        allowTouchMove: false,
-      });
-
-      let swiperContainer = document.querySelector(".swiper-wrapper");
-
-      data.photos.forEach((element) => {
-        let slide = document.createElement("div");
-        slide.classList.add("swiper-slide");
-        slide.style.backgroundImage = `url('${element}')`;
-
-        swiperContainer.appendChild(slide);
-      });
-
-      const buttonPrev = document.querySelector(".button-prev");
-      buttonPrev.addEventListener("click", function () {
-        console.log("buttonPrev");
-        var currentIndex = swiper.activeIndex + 1;
-        console.log("Current Slide Index:", currentIndex);
-        if (currentIndex === 1) {
-          buttonPrev.style.opacity = "50%";
-        }
-        if (currentIndex === data.photos.length) {
-          buttonNext.style.opacity = "50%";
-        }
-        if (currentIndex !== 1) {
-          buttonPrev.style.opacity = "100%";
-        }
-        if (currentIndex !== data.photos.length) {
-          buttonNext.style.opacity = "100%";
-        }
-      });
-
-      const buttonNext = document.querySelector(".button-next");
-      buttonNext.addEventListener("click", function () {
-        console.log("buttonNext");
-        var currentIndex = swiper.activeIndex + 1;
-        console.log("Current Slide Index:", currentIndex);
-        if (currentIndex === 1) {
-          buttonPrev.style.opacity = "50%";
-        }
-        if (currentIndex === data.photos.length) {
-          buttonNext.style.opacity = "50%";
-        }
-        if (currentIndex !== 1) {
-          buttonPrev.style.opacity = "100%";
-        }
-        if (currentIndex !== data.photos.length) {
-          buttonNext.style.opacity = "100%";
-        }
-      });
-
-      let photoCards = document.querySelectorAll(
-        ".photogallery__container-photo"
-      );
-
-      photoCards.forEach((element, index) => {
-        element.addEventListener("click", function () {
-          modal.style.display = "flex";
-
-          // Use the Swiper API to change the active slide
-          swiper.slideTo(index);
-
-          console.log("index", index);
-          console.log("swiper.activeIndex", swiper.activeIndex);
-
-          var currentIndex = swiper.activeIndex + 1;
-          if (currentIndex === 1) {
-            buttonPrev.style.opacity = "50%";
-          }
-          if (currentIndex === data.photos.length) {
-            buttonNext.style.opacity = "50%";
-          }
-          if (currentIndex !== 1) {
-            buttonPrev.style.opacity = "100%";
-          }
-          if (currentIndex !== data.photos.length) {
-            buttonNext.style.opacity = "100%";
-          }
-        });
-        element.style.backgroundImage = `url('${data.photos[index]}')`;
-      });
-
-      let photosSubtitle = document.querySelector("#photogallery__subtitle");
-      let photosLength = document.querySelector(".photogallery__length");
-      console.log("photosSubtitle", photosSubtitle);
-      console.log("photosLength", photosLength);
-
-      photosSubtitle.textContent = data.title;
-      photosLength.textContent = `${data.photos.length} фото`;
-
-      let close = document.querySelector(".close");
-
-      close.addEventListener("click", function () {
-        modal.style.display = "none";
-      });
-
-      let swiperTitle = document.querySelector(".swiper-title");
-      swiperTitle.textContent = data.title;
-
-      window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
+        photogalleryContainer.appendChild(albumDiv);
       });
     </script>
   </body>
