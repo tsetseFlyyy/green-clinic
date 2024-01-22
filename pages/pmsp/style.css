@@ -155,7 +155,8 @@
 .roulet__postview-content {
   margin-left: 145px;
   /*max-width: 45%;*/
-  width: 601px;
+  max-width: 601px;
+  /*width: 60%;*/
   opacity: 0;
   transition: 1s ease-in-out;
   /*position: relative;*/
@@ -486,6 +487,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-radius: 90px;
   background-image: url("../../images/how-to-get-bg.png");
   background-position: center;
   background-size: cover;
@@ -613,7 +615,7 @@
   border-radius: 90px;
   width: 40%;
   padding: 30px 70px;
-  /*height: ;*/
+  /*min-height: 176px;*/
 }
 
 .doctor__left h2 {
@@ -660,6 +662,7 @@
   right: 30%;
   padding: 42px 114px;
   transition: 1s ease-in-out;
+  /*min-height: 176px;*/
 }
 
 .doctor__right.turn-right {
@@ -679,6 +682,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: scroll;
+}
+
+.doctor__day:not(:last-child) {
+  margin-right: 30px;
 }
 
 .doctor__day-date {
@@ -777,4 +785,85 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+@media (max-width: 1900px) {
+  .image-visible {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .roulet-image {
+    right: -580px;
+  }
+  .roulet__postview-content {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .image-visible {
+    width: 1100px;
+  }
+  .roulet-image {
+    right: -550px;
+  }
+  .roulet__postview-content {
+    margin-left: 50px;
+  }
+  .roulet__postview {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .doctor__left,
+  .doctor__right {
+    height: 230px;
+  }
+
+  .doctor__right {
+    padding: 70px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .image-visible {
+    width: 1000px;
+  }
+
+  .roulet__preview {
+    padding: 30px 40px;
+  }
+
+  .roulet__preview-text {
+    font-size: 20px;
+  }
+
+  .roulet__postview {
+    margin-right: 10px;
+  }
+
+  .roulet__postview-content {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .roulet__preview {
+    padding: 25px 25px;
+  }
+
+  .roulet__postview-content {
+    max-width: 550px;
+  }
+
+  .roulet__button {
+    width: 250px;
+  }
+
+  .roulet__button span {
+    font-size: 16px;
+  }
 }
