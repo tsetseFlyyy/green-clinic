@@ -217,7 +217,6 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  /*line-height: 25px;*/
   margin-top: 16px;
 }
 
@@ -227,7 +226,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 25px; /* 156.25% */
+  line-height: 25px;
   margin-top: 25px;
 }
 
@@ -314,6 +313,17 @@
   gap: 30px;
 }
 
+#pmsp__services-wrapper {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+#pmsp__services-wrapper.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .pmsp__left {
   border-radius: 90px;
   background: #04633e;
@@ -373,6 +383,7 @@
 .pmsp__right-image {
   margin-top: 30px;
   border-radius: 90px;
+  width: 100%;
 }
 
 .check-status {
@@ -405,15 +416,41 @@
   gap: 32px;
 }
 
+.booking-wrapper {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.booking-wrapper.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .booking__item {
   border-radius: 90px;
   border: 1px solid #0f8f5d;
-  /*border: 1px solid #fff;*/
   padding: 46px 56px 36px;
   height: 312px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.booking__item:hover {
+  border: 1px solid #ffca79;
+}
+
+.booking__item svg {
+  position: absolute;
+  right: calc(100% - 80px);
+  /*right: 100%;*/
+  bottom: 36px;
+  transition: 1s ease-in-out;
+}
+
+.booking__item:hover svg {
+  right: 56px;
 }
 
 .booking__item h3 {
@@ -432,7 +469,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px;
 }
 
 .how-to-get {
@@ -446,6 +483,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 85px 0;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.how-to-get.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .how-to-get h3 {
@@ -463,6 +508,14 @@
   border-radius: 90px;
   background: #27ae79;
   padding: 52px 56px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.search.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .search h2 {
@@ -502,6 +555,7 @@
   width: 18%;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 90px;
   padding: 35px 100px;
 }
@@ -512,6 +566,17 @@
 
 .third-title {
   margin-top: 120px;
+}
+
+.doctors-graphics-wrapper {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.doctors-graphics-wrapper.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .doctor {
@@ -584,8 +649,13 @@
   background: #27ae79;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 30%;
   padding: 42px 114px;
+  transition: 1s ease-in-out;
+}
+
+.doctor__right.turn-right {
+  right: 0;
 }
 
 .doctor__right-label {
@@ -646,11 +716,22 @@
   margin-top: 120px;
 }
 
+.support-cards-wrapper {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.support-cards-wrapper.visible-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .support__card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   border-radius: 90px;
   background: #04633e;
   padding: 58px 68px;

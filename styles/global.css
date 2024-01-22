@@ -36,6 +36,11 @@ a {
   text-decoration: none;
 }
 
+ul,
+ol {
+  list-style-position: inside;
+}
+
 .breadcrumbs {
   opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
   transform: translateY(-50px); /* Начальное значение смещения вниз */
