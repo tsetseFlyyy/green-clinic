@@ -326,7 +326,11 @@
 
 .pmsp__left {
   border-radius: 90px;
-  background: #04633e;
+  background-color: #04633e;
+  background-image: url("../../images/services-card-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 60px 41px 88px 44px;
 }
 
@@ -363,7 +367,11 @@
 
 .pmsp__right-top {
   border-radius: 90px;
-  background: #04633e;
+  background-color: #04633e;
+  background-image: url("../../images/services-card-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 60px 41px 54px 44px;
 }
 
