@@ -134,9 +134,7 @@
 
 .modal__content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: fit-content;
+  flex-direction: column;
 }
 
 .swiper {
@@ -158,7 +156,8 @@
 
 .swiper-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .swiper-title {
@@ -176,7 +175,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
+  margin: 0 166px 28px;
 }
 
 .swiper-title-container svg {
@@ -194,7 +193,7 @@
   }
 
   .swiper {
-    width: 1003px;
+    width: 1103px;
     height: 655px;
   }
 }
@@ -209,7 +208,7 @@
   }
 
   .swiper {
-    width: 803px;
+    width: 1003px;
     height: 555px;
   }
 }
@@ -230,14 +229,14 @@
   }
 
   .swiper {
-    width: 703px;
-    height: 490px;
+    width: 753px;
+    height: 550px;
   }
 }
 
 @media (max-width: 1000px) {
   .swiper {
-    width: 503px;
-    height: 400px;
+    width: 653px;
+    height: 450px;
   }
 }
