@@ -33,7 +33,7 @@
           <div class="roulet__preview-underlay visible"></div>
         </div>
         <div class="roulet__postview full-width">
-          <div class="roulet__postview-content">
+          <div class="roulet__postview-content opacity-full">
             <h3 class="roulet__content-title">Как можно прикрепиться?</h3>
             <ul>
               <li>
@@ -78,6 +78,7 @@
               </div>
             </div>
           </div>
+			 <img class="roulet-image image-visible" src="../../images/Slice 1.png" alt="slice-1">
         </div>
         <div class="roulet__preview">
           <p class="roulet__preview-num">02</p>
@@ -98,7 +99,7 @@
           <div class="roulet__preview-underoverlay"></div>
           <div class="roulet__preview-underlay"></div>
         </div>
-        <div class="roulet__postview">
+        <div class="roulet__postview roulet__postview-2">
           <div class="roulet__postview-content">
             <h3 class="roulet__content-title">Почему могут отказать?</h3>
             <ul>
@@ -144,6 +145,7 @@
               </div>
             </div>
           </div>
+			 <img class="roulet-image image-visible" src="../../images/Slice 2.png" alt="slice-1">
         </div>
         <div class="roulet__preview">
           <p class="roulet__preview-num">03</p>
@@ -164,7 +166,7 @@
           <div class="roulet__preview-underoverlay"></div>
           <div class="roulet__preview-underlay"></div>
         </div>
-        <div class="roulet__postview">
+        <div class="roulet__postview roulet__postview-3">
           <div class="roulet__postview-content">
             <h3 class="roulet__content-title">Плановая – медицинская помощь</h3>
             <p class="roulet__content-description">
@@ -175,6 +177,7 @@
               по предварительной записи или обращению
             </p>
           </div>
+			 <img class="roulet-image image-visible" src="../../images/Slice 3.png" alt="slice-1">
         </div>
       </div>
     </section>
@@ -188,7 +191,10 @@
         ".roulet__preview-underlay"
       );
       const rouletPostviewsContent = document.querySelectorAll(
-        ".roulet__preview-content"
+        ".roulet__postview-content"
+      );
+      const rouletPostviewsImages = document.querySelectorAll(
+        ".roulet-image"
       );
 
       //rouletPreview.addEventListener('click', () => {
@@ -200,6 +206,8 @@
           rouletPostviews.forEach((elem, index) => {
             elem.classList.remove("full-width");
             rouletPostviewsUnderlay[index].classList.remove("visible");
+            rouletPostviewsContent[index].classList.remove("opacity-full");
+				rouletPostviewsImages[index].classList.remove("image-visible");
             setTimeout(() => {
               rouletPreviewSvg[index].classList.remove("rotate");
             }, 1000);
@@ -207,6 +215,8 @@
           setTimeout(() => {
             rouletPostviews[index].classList.add("full-width");
             rouletPostviewsUnderlay[index].classList.add("visible");
+            rouletPostviewsContent[index].classList.add("opacity-full");
+            rouletPostviewsImages[index].classList.add("image-visible");
             rouletPreviewSvg[index].classList.add("rotate");
           }, 1000);
         });

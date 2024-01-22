@@ -88,10 +88,11 @@
 
 .roulet__preview-svg {
   margin-top: 19px;
+  transition: 1s ease-in-out;
 }
 
 .rotate {
-  transform: rotate(-180deg);
+  transform: rotate(180deg);
 }
 
 .roulet__preview-text {
@@ -105,12 +106,25 @@
   line-height: normal;
 }
 
+.roulet-image {
+	width: 0;
+	position: absolute;
+	right: -534px;
+  bottom: 0;
+	z-index: 0;
+	transition: 1s ease-in-out;
+}
+
+.image-visible {
+	width: 1373px;
+}
+
 .roulet__postview {
   background-color: #04633e;
-  background-image: url("../../images/pin-item.png");
+  /*background-image: url("../../images/pin-item.png");*/
   background-size: cover;
-  /*background-position: right;*/
-  background-position: center;
+  background-position: right;
+  /*background-position: center;*/
   background-repeat: no-repeat;
   border-radius: 0 90px 90px 0;
   top: 0;
@@ -121,7 +135,16 @@
   margin-right: 30px;
   display: flex;
   align-items: center;
+  position: relative;
 }
+
+/*.roulet__postview-2 {
+  background-image: url("../../images/roulet-bg-2.png");
+}
+
+.roulet__postview-3 {
+  background-image: url("../../images/roulet-bg-3.png");
+}*/
 
 .full-width {
   width: 100%;
@@ -131,12 +154,15 @@
   margin-left: 145px;
   /*max-width: 45%;*/
   width: 601px;
-  /*opacity: 0;*/
+  opacity: 0;
   transition: 1s ease-in-out;
+  /*position: relative;*/
+  position: absolute;
+  z-index: 3;
 }
 
 .opacity-full {
-	opacity: 100%;
+  opacity: 1 !important;
 }
 
 .roulet__content-title {
