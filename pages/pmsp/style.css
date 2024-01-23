@@ -47,6 +47,9 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .roulet__preview-underlay {
@@ -98,7 +101,8 @@
 }
 
 .roulet__preview-text {
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   margin-top: 59px;
   color: #fff;
   font-family: Geologica;
