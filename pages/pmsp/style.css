@@ -801,6 +801,7 @@
 @media (max-width: 1800px) {
   .doctor__graphics {
     overflow-x: scroll;
+    scrollbar-width: thin;
   }
 }
 
