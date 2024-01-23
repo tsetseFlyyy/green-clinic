@@ -154,12 +154,9 @@
 
 .roulet__postview-content {
   margin-left: 145px;
-  /*max-width: 45%;*/
-  max-width: 601px;
-  /*width: 60%;*/
+  width: 601px;
   opacity: 0;
   transition: 1s ease-in-out;
-  /*position: relative;*/
   position: absolute;
   z-index: 3;
 }
@@ -241,6 +238,11 @@
 .roulet__button {
   width: 290px;
   text-align: center;
+}
+
+.queue-button {
+  width: 350px;
+  margin-top: 30px;
 }
 
 .roulet__buttons-yellow {
@@ -613,7 +615,7 @@
 
 .doctor__left {
   border-radius: 90px;
-  width: 40%;
+  width: 45%;
   padding: 30px 70px;
   /*min-height: 176px;*/
 }
@@ -654,12 +656,12 @@
 }
 
 .doctor__right {
-  width: 70%;
+  width: 65%;
   border-radius: 90px;
   background: #27ae79;
   position: absolute;
   top: 0;
-  right: 30%;
+  right: 35%;
   padding: 42px 114px;
   transition: 1s ease-in-out;
   /*min-height: 176px;*/
@@ -682,7 +684,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: scroll;
 }
 
 .doctor__day:not(:last-child) {
@@ -793,6 +794,12 @@
   }
 }
 
+@media (max-width: 1800px) {
+  .doctor__graphics {
+    overflow-x: scroll;
+  }
+}
+
 @media (max-width: 1700px) {
   .roulet-image {
     right: -580px;
@@ -856,7 +863,7 @@
   }
 
   .roulet__postview-content {
-    max-width: 550px;
+    width: 550px;
   }
 
   .roulet__button {
