@@ -3,6 +3,11 @@
   padding-bottom: 164px;
 }
 
+.contacts {
+  padding-left: 99px;
+  padding-right: 99px;
+}
+
 .contacts__title {
   margin-top: 50px;
   margin-bottom: 60px;
@@ -11,7 +16,7 @@
 .contacts__details {
   width: 100%;
   border-radius: 90px;
-  padding: 48px 87px;
+  padding: 48px 86px 50px 87px;
   display: grid;
   background-color: #04633e;
   grid-template-columns: 1fr 1fr 1fr;
@@ -53,6 +58,13 @@
 .contacts__detail p {
   margin-top: 9px;
   padding-left: 31px;
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.72px;
 }
 
 .yandex-map {

@@ -260,7 +260,8 @@
       data.photos.forEach((photo, index) => {
         let photoCard = `
                 <div class="photogallery__container-photo pointer">
-                      <svg
+							 <div class="photo-overlay">
+								<svg
                         width="78"
                         height="78"
                         viewBox="0 0 78 78"
@@ -284,8 +285,6 @@
                           fill="white"
                         />
                       </svg>
-							 <div class="photo-overlay">
-
 								</div>
                     </div>
                 `;

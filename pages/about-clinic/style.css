@@ -14,6 +14,11 @@
   padding-bottom: 164px;
 }
 
+.about-clinic {
+  padding-left: 98px;
+  padding-right: 103px;
+}
+
 .about-clinic__title {
   margin-top: 50px;
   margin-bottom: 60px;
@@ -24,38 +29,39 @@
   padding: 183px 154px 234px;
   background-image: url("../../images/about-clinic-hero.png");
   background-position: center;
-  background-size: cover;
+  /*background-size: cover;*/
+  background-size: 100% 100%;
   width: 100%;
-  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
-  transform: translateY(100px); /* Начальное значение смещения вниз */
+  opacity: 0;
+  transform: translateY(100px);
   animation: slide-up 1s ease-in-out forwards;
 }
 
 @keyframes slide-up {
   to {
-    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
-    transform: translateY(
-      0
-    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .about-clinic__hero h1 {
   color: #fff;
-  font-family: Geologica;
+  font-family: "Geologica", sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 900;
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
+  line-height: 151px;
 }
 
 .about-clinic__hero p {
   color: #fff;
-  font-family: Geologica;
+  font-family: "Geologica", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
   width: 609px;
+  line-height: 38px;
 }
 
 .about-clinic__headline {
@@ -88,6 +94,7 @@
   font-style: normal;
   font-weight: 300;
   margin-top: 25px;
+  line-height: 28px;
 }
 
 .about-clinic__description-bold {
