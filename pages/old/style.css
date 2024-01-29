@@ -1,0 +1,151 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.old__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.old__card {
+  display: flex;
+  align-items: stretch;
+}
+
+.old__card-mrt .old__card-left {
+  width: 53%;
+  border-radius: 90px;
+  background-image: url("../../images/mrt.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 635px;
+}
+
+.old__card-rentgen .old__card-left {
+  width: 53%;
+  border-radius: 90px;
+  background-image: url("../../images/rentgen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 635px;
+}
+
+.old__card-right {
+  border-radius: 90px;
+  background: #fff;
+  padding: 122px 82px;
+  width: 55%;
+  position: absolute;
+  /*right: 0;*/
+  right: 45%;
+  z-index: 2;
+  height: 635px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.old__card-one-right.visible {
+  right: 0;
+  transition: 1.25s ease-in-out;
+}
+
+.old__card-two-right.visible {
+  right: 0;
+  transition: 1.25s ease-in-out;
+}
+
+.old__card-three-right.visible {
+  right: 0;
+  transition: 1.25s ease-in-out;
+}
+
+.old__card-right h2 {
+  color: #2d2828;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.old__card-subtitle {
+  color: #167953;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 138.889% */
+  margin-top: 10px;
+}
+
+.old__card-right p {
+  color: #2d2828;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 138.889% */
+  margin-top: 30px;
+}
+
+.old__card-button {
+  border-radius: 108px;
+  background: #ffca79;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-top: 20px;
+}
+
+.old__card-button span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 178.571% */
+}
+
+.old__card-button svg {
+  margin-left: 10px;
+}
+
+.old__card-one {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.old__card-one.visible {
+  opacity: 1;
+  transform: translateY(0); /* Начальное значение смещения вниз */
+}
+
+.old__card-two {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.old__card-two.visible {
+  opacity: 1;
+  transform: translateY(0); /* Начальное значение смещения вниз */
+}
+
+.old__card-three {
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
+}
+
+.old__card-three.visible {
+  opacity: 1;
+  transform: translateY(0); /* Начальное значение смещения вниз */
+}
