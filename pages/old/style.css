@@ -149,3 +149,26 @@
   opacity: 1;
   transform: translateY(0); /* Начальное значение смещения вниз */
 }
+
+@media (max-width: 1600px) {
+  .old__card-right {
+    padding: 122px 60px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .old__card-right {
+    width: 63%;
+  }
+
+  .old__card-button {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .old__card-right {
+    width: 70%;
+  }
+}
