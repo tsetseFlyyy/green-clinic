@@ -27,6 +27,10 @@
   background-repeat: no-repeat;
 }
 
+.relative {
+  position: relative !important;
+}
+
 .container {
   padding-left: 98px;
   padding-right: 100px;

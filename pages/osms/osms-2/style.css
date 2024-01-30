@@ -1,0 +1,169 @@
+.section {
+  background-image: url("../../../images/contacts-bg.jpg");
+  min-height: 100vh;
+  padding-bottom: 164px;
+}
+
+.osms__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.osms__subtitle {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.osms__steps {
+  border-top: 1px solid rgba(255, 255, 255, 0.26);
+  margin-top: 66px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 62px;
+  margin-left: 100px;
+}
+
+.osms__step:nth-child(4) p {
+  margin-right: 100px;
+}
+
+.osms__step p,
+.osms__step li {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%; /* 32px */
+  margin-top: 65px;
+}
+
+.osms__step li {
+  margin-top: 0;
+}
+
+.osms__step-count {
+  width: fit-content;
+  position: relative;
+  position: absolute;
+  top: -36.5px;
+}
+
+.osms__step-count span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.osms__step-button {
+  display: inline-flex;
+  padding: 30px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 108px;
+  background: #ffca79;
+  margin-top: 25px;
+}
+
+.osms__step-button span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
+.osms__steps-two {
+  margin-top: 136px;
+  margin-left: 0;
+  padding-left: 100px;
+}
+
+.osms__step-seven {
+  grid-column: span 2;
+  padding-right: 100px;
+}
+
+.osms__step-bold {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.osms__line {
+  width: 86px;
+  height: 2px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.26);
+  margin-right: 14px;
+}
+
+.osms__step--last {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.osms__step-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-right: 100px;
+}
+
+.osms__step-card {
+  position: relative;
+  border-radius: 90px;
+  background-color: #04633e;
+  background-image: url('../../../images/osms-step-8.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 67px 78px;
+}
+
+.osms__text {
+	margin-left: 40px;
+}
+
+.osms__text h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.osms__text h3 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+.osms__count {
+  position: relative;
+  width: fit-content;
+}
+
+.osms__count span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
