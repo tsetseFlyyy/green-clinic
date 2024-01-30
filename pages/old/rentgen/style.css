@@ -3,6 +3,15 @@
   padding-bottom: 164px;
 }
 
+span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
 .rentgen__title {
   margin-top: 50px;
   margin-bottom: 60px;
