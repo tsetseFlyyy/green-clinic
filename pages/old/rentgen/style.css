@@ -108,6 +108,7 @@
   flex-direction: column;
   align-items: center;
   padding: 56px 66px 71px;
+  height: 347px;
 }
 
 .rentgen__step p {
@@ -314,4 +315,43 @@
   font-style: normal;
   font-weight: 300;
   line-height: 35px; /* 175% */
+}
+
+@media (max-width: 1600px) {
+  .rentgen__steps-container {
+    gap: 20px;
+  }
+
+  .rentgen__step {
+    padding: 56px 25px 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  .rentgen__steps-container {
+    gap: 10px;
+  }
+
+  .rentgen__step {
+    padding: 56px 25px 0;
+  }
+}
+
+@media (max-width: 1400px) {
+  .rentgen__step p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .rentgen__step {
+    padding: 30px 25px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rentgen__step {
+    padding: 35px 25px 0;
+    height: 330px;
+  }
 }
