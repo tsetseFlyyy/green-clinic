@@ -3,6 +3,15 @@
   padding-bottom: 164px;
 }
 
+span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+}
+
 .kt__title {
   margin-top: 50px;
   margin-bottom: 60px;
@@ -107,7 +116,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 45px;
+  padding: 56px 45px 0;
   height: 347px;
 }
 
@@ -130,7 +139,6 @@
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 120px;
   width: 49%;
 }
 
@@ -205,6 +213,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+  margin-top: 120px;
 }
 
 .details {
@@ -326,5 +335,57 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
-  line-height: 35px; /* 175% */
+  line-height: 35px;
+}
+
+@media (max-width: 1600px) {
+  .kt__steps-container {
+    gap: 20px;
+  }
+
+  .kt__step {
+    padding: 56px 25px 0;
+  }
+
+  .contraindications h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .kt__steps-container {
+    gap: 10px;
+  }
+
+  .contraindications h1 {
+    font-size: 45px;
+  }
+
+  .kt__step {
+    padding: 56px 25px 0;
+    /*height: 380px;*/
+  }
+}
+
+@media (max-width: 1400px) {
+  .kt__step p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .kt__step {
+    padding: 30px 25px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .kt__step {
+    padding: 35px 25px 0;
+    height: 330px;
+  }
+
+  .contraindications h1 {
+	font-size: 41px;
+  }
 }
