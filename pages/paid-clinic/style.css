@@ -1,0 +1,59 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.paid-clinic {
+  min-height: 100vh;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 755px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.swiper-slide {
+  /*background: linear-gradient(90deg, #065736 10.67%, rgba(6, 87, 54, 0) 100%),
+    url("../../images/green-clinic-picture.jpeg"),
+    lightgray 50% / cover no-repeat;*/
+  border-radius: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 115px;
+}
+
+.swiper-slide h1 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 40%;
+}
+
+.button-prev {
+  position: absolute;
+  left: -83px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.button-next {
+  position: absolute;
+  right: -83px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
