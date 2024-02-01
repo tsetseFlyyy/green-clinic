@@ -1,0 +1,91 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.h-refresher {
+  min-height: 100vh;
+}
+
+.h-refresher-title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.h-refresher__subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.h-refresher__subtitle svg {
+  margin-right: 10px;
+}
+
+.h-refresher__subtitle h2 {
+  font-family: Geologica;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.h-refresher__one {
+  border: 1px solid #0f8f5d;
+  border-radius: 90px;
+  padding: 46px 49px;
+  margin-top: 25px;
+}
+
+.h-refresher__one h3 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.h-refresher__cols {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+
+.h-refresher__one-col p,
+.h-refresher__one-col li {
+  font-family: Geologica;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.h-refresher__one-col li {
+  font-weight: 400;
+}
+
+.yellow-button {
+  background: #ffca79;
+  border: none;
+  border-radius: 108px;
+  padding: 30px;
+  margin-top: 30px;
+  font-family: Geologica;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #262626;
+}
+
+.h-refresher__one-col-desc {
+  font-weight: 600;
+  margin-top: 37px;
+}
