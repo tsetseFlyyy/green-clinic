@@ -27,6 +27,10 @@
   background-repeat: no-repeat;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 .relative {
   position: relative !important;
 }
@@ -38,6 +42,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul,

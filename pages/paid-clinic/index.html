@@ -422,6 +422,115 @@
           </div>
         </div>
       </div>
+      <div id="modal">
+        <div id="modal-content">
+          <div class="modal__content-top">
+            <h3 class="modal__content-title">Справка 075У</h3>
+            <svg
+              class="close"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="#262626"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="#262626"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="modal__top-info"></div>
+          <div class="modal__details">
+            <div class="receipt-time">
+              <h4>Срок получения</h4>
+              <ul>
+                <li>
+                  При наличии анализов и рентгенографии грудной клетки - 1 час.
+                </li>
+                <li>В случае отсутствия - 1 день</li>
+              </ul>
+            </div>
+            <div class="price">
+              <h4>Цена</h4>
+              <h2>9 000 тнг.</h2>
+            </div>
+            <button class="yellow-button">
+              <span class="yellow-button-label">Получить</span>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
+                  fill="#262626"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="people-container">
+            <div class="male people">
+              <h4>Мужчинам</h4>
+              <p>При наличии справок от нарколога и психиатра (Egov.kz)</p>
+              <ul>
+                <li>Хирург</li>
+                <li>Офтальмолог</li>
+                <li>Невропатолог</li>
+                <li>Терапевт</li>
+              </ul>
+              <p>
+                без стоимости микрореакции, рентгена грудной клетки,Вы можете
+                прийти с готовым анализом и рентгенографией грудной клетки сдав
+                у себя в поликлинике
+              </p>
+            </div>
+            <div class="female people">
+              <h4>Женщинам</h4>
+              <p>При наличии справок от нарколога и психиатра (Egov.kz)</p>
+              <ul>
+                <li>Хирург</li>
+                <li>Офтальмолог</li>
+                <li>Невропатолог</li>
+                <li>Терапевт</li>
+              </ul>
+              <p>
+                без стоимости микрореакции, рентгена грудной клетки,Вы можете
+                прийти с готовым анализом и рентгенографией грудной клетки сдав
+                у себя в поликлинике
+              </p>
+            </div>
+            <div class="kids people">
+              <h4>Детям</h4>
+              <p>При наличии справок от нарколога и психиатра (Egov.kz)</p>
+              <ul>
+                <li>Хирург</li>
+                <li>Офтальмолог</li>
+                <li>Невропатолог</li>
+                <li>Терапевт</li>
+              </ul>
+              <p>
+                без стоимости микрореакции, рентгена грудной клетки,Вы можете
+                прийти с готовым анализом и рентгенографией грудной клетки сдав
+                у себя в поликлинике
+              </p>
+            </div>
+          </div>
+          <div class="bottom__details"></div>
+        </div>
+      </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -446,18 +555,18 @@
 
       for (let i = 0; i < data.length; i++) {
         swiperWrapper.innerHTML += `
-                              			<div class="swiper-slide">
-                              				<h1>${data[i].title}</h1>
-                              			</div>
-                              			`;
+                                      			<div class="swiper-slide">
+                                      				<h1>${data[i].title}</h1>
+                                      			</div>
+                                      			`;
       }
 
       let swiperSlides = document.querySelectorAll(".swiper-slide");
 
       swiperSlides.forEach((slide, index) => {
         slide.style.background = `linear-gradient(90deg, #065736 10.67%, rgba(6, 87, 54, 0) 100%),
-                                  url(${data[index].imgSrc}),
-                                  lightgray 50% / cover no-repeat`;
+                                          url(${data[index].imgSrc}),
+                                          lightgray 50% / cover no-repeat`;
         slide.style.backgroundSize = "cover";
         slide.style.backgroundRepeat = "no-repeat";
         slide.style.backgroundPosition = "center";
@@ -537,35 +646,58 @@
 
       directions.forEach((elem, index) => {
         directionsDiv.innerHTML += `
-                        		 <div class="direction">
-                        			${elem}
-                        		 </div>
-                        		  `;
+                                		 <div class="direction">
+                                			${elem}
+                                		 </div>
+                                		  `;
       });
 
       let services = [
         {
           title: "Справка 069/У",
           description: "санаторно-курортнаямедкарта(лечебно-оздоровительная)",
+          receiptTime: [
+            "При наличии анализов и рентгенографии грудной клетки - 1 час.",
+            "В случае отсутствия - 1 день",
+          ],
+          price: 9000,
         },
         {
           title: "Справка 072/У",
           description: "для выезжающего за границу",
+          receiptTime: "1 час",
+          price: 12000,
         },
         {
           title: "Справка 073/У",
           description:
             "получатель в состоянии управлять транспортным средством.",
+          receiptTime: [
+            "При наличии анализов и рентгенографии грудной клетки - 1 час.",
+            "В случае отсутствия - 1 день",
+          ],
+          price: 8000,
         },
         {
           title: "Справка 075/У",
           list: ["при поступлении в учебные учреждения", "при трудоустройстве"],
+          receiptTime: [
+            "При наличии анализов и рентгенографии грудной клетки - 1 час.",
+            "В случае отсутствия - 1 день",
+          ],
+          price: 9000,
         },
         {
           title: "Справка 076/У",
           description:
             "приобретение, хранение, хранение и ношение гражданского и служебного оружия",
+          receiptTime: [
+            "При наличии анализов и рентгенографии грудной клетки - 1 час.",
+            "В случае отсутствия - 1 день",
+          ],
+          price: 9000,
         },
+
         {
           title: "Паспорт здоровья ребенка (форма 026/у)",
           description: "перед поступлением в:",
@@ -573,19 +705,33 @@
             "организацию образования (школу, школаинтернат, лицей);",
             "организацию дошкольного образования (детский садик).",
           ],
+          receiptTime: [
+            "При наличии анализов и рентгенографии грудной клетки - 1 час.",
+            "В случае отсутствия - 1 день",
+          ],
+          price: 15600,
         },
         {
           title: "Больничный лист",
           description:
             "удостоверяющий временную нетрудоспособность граждан и подтверждающий временное освобождение от работы",
+          receiptTime: "1 час",
+          price: 1500,
         },
         {
           title: "Санитарная книжка(медицинская книжка)",
           description:
             "соответствие работника медицинским требованиям и пройденным обязательным медицинским осмотрам.",
+          receiptTime: "1 час",
+          price: [
+            `Заключение терапевта в санитарную книжку <span class="bold">4000 тенге</span>`,
+            `Санитарная книжка <span class="bold">800 тенге</span>`,
+          ],
         },
         {
           title: "Периодический профилактический медицинский осмотр работников",
+          receiptTime: "1 час",
+          price: "Индивидуальная Стоимость",
         },
       ];
 
@@ -594,62 +740,315 @@
 
       services.forEach((elem, index) => {
         mServices.innerHTML += `
-			<div class="m-services__item">
-          <div class="m-services__details">
-				<div>
-            <svg
-              class="m-services__details-m-icon"
-              width="73"
-              height="73"
-              viewBox="0 0 73 73"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="36.5" cy="36.5" r="36.5" fill="#FFCA79" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M23.043 48.6295C23.043 49.9145 24.0839 50.9553 25.3687 50.9553H48.6277C49.9127 50.9553 50.9534 49.9145 50.9534 48.6295V31.1853C50.9534 29.9003 49.9127 28.8594 48.6277 28.8594H43.9758V25.3706C43.9758 24.0856 42.935 23.0448 41.6499 23.0448H32.3465C31.0615 23.0448 30.0206 24.0857 30.0206 25.3706V28.8594H25.3688C24.0839 28.8594 23.043 29.9003 23.043 31.1853V48.6295H23.043ZM41.0686 28.8593H32.9279V27.2315C32.9279 26.5222 33.4978 25.9521 34.2073 25.9521H39.7891C40.4985 25.9521 41.0685 26.5222 41.0685 27.2315V28.8593H41.0686ZM31.2999 37H34.0909V34.2091C34.0909 33.4998 34.6606 32.9297 35.3702 32.9297H38.6263C39.3354 32.9297 39.9055 33.4998 39.9055 34.2091V37H42.6963C43.4058 37 43.9758 37.57 43.9758 38.2794V41.5354C43.9758 42.2446 43.4058 42.8145 42.6963 42.8145H39.9055V45.6058C39.9055 46.3149 39.3354 46.8849 38.6263 46.8849H35.3702C34.6607 46.8849 34.0909 46.3149 34.0909 45.6058V42.8145H31.2999C30.5904 42.8145 30.0206 42.2446 30.0206 41.5354V38.2794C30.0206 37.57 30.5904 37 31.2999 37Z"
-                fill="#262626"
-              />
-            </svg>
-				</div>
-            <div>
-              <div class="m-services__details-title">
-                <h4>${elem.title}</h4>
-					 <div>
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M22.6274 11.3431L22.6274 10.3431L23.6274 10.3431L23.6274 11.3431L22.6274 11.3431ZM12.7279 22.6568C12.3374 23.0473 11.7042 23.0473 11.3137 22.6568C10.9232 22.2663 10.9232 21.6331 11.3137 21.2426L12.7279 22.6568ZM14.1421 10.3431H22.6274L22.6274 12.3431H14.1421L14.1421 10.3431ZM23.6274 11.3431L23.6274 19.8284H21.6274L21.6274 11.3431L23.6274 11.3431ZM23.3345 12.0502L12.7279 22.6568L11.3137 21.2426L21.9203 10.636L23.3345 12.0502Z"
-                    fill="white"
-                  />
-                </svg>
-					 </div>
-              </div>
-              ${
-                elem.description !== undefined
-                  ? `<p>${elem.description}</p>`
-                  : ""
-              }
-              ${
-                elem.list !== undefined
-                  ? `<ul>
-					${elem.list.map((li, i) => `<li>${li}</li>`)}
-					
-					</ul>`
-                  : ""
-              }
-            </div>
-          </div>
-        </div>
-			
-			`;
+        			<div class="m-services__item">
+                  <div class="m-services__details">
+        				<div>
+                    <svg
+                      class="m-services__details-m-icon"
+                      width="73"
+                      height="73"
+                      viewBox="0 0 73 73"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="36.5" cy="36.5" r="36.5" fill="#FFCA79" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M23.043 48.6295C23.043 49.9145 24.0839 50.9553 25.3687 50.9553H48.6277C49.9127 50.9553 50.9534 49.9145 50.9534 48.6295V31.1853C50.9534 29.9003 49.9127 28.8594 48.6277 28.8594H43.9758V25.3706C43.9758 24.0856 42.935 23.0448 41.6499 23.0448H32.3465C31.0615 23.0448 30.0206 24.0857 30.0206 25.3706V28.8594H25.3688C24.0839 28.8594 23.043 29.9003 23.043 31.1853V48.6295H23.043ZM41.0686 28.8593H32.9279V27.2315C32.9279 26.5222 33.4978 25.9521 34.2073 25.9521H39.7891C40.4985 25.9521 41.0685 26.5222 41.0685 27.2315V28.8593H41.0686ZM31.2999 37H34.0909V34.2091C34.0909 33.4998 34.6606 32.9297 35.3702 32.9297H38.6263C39.3354 32.9297 39.9055 33.4998 39.9055 34.2091V37H42.6963C43.4058 37 43.9758 37.57 43.9758 38.2794V41.5354C43.9758 42.2446 43.4058 42.8145 42.6963 42.8145H39.9055V45.6058C39.9055 46.3149 39.3354 46.8849 38.6263 46.8849H35.3702C34.6607 46.8849 34.0909 46.3149 34.0909 45.6058V42.8145H31.2999C30.5904 42.8145 30.0206 42.2446 30.0206 41.5354V38.2794C30.0206 37.57 30.5904 37 31.2999 37Z"
+                        fill="#262626"
+                      />
+                    </svg>
+        				</div>
+                    <div>
+                      <div class="m-services__details-title">
+                        <h4>${elem.title}</h4>
+        					 <div>
+                        <svg
+                          width="34"
+                          height="34"
+                          viewBox="0 0 34 34"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M22.6274 11.3431L22.6274 10.3431L23.6274 10.3431L23.6274 11.3431L22.6274 11.3431ZM12.7279 22.6568C12.3374 23.0473 11.7042 23.0473 11.3137 22.6568C10.9232 22.2663 10.9232 21.6331 11.3137 21.2426L12.7279 22.6568ZM14.1421 10.3431H22.6274L22.6274 12.3431H14.1421L14.1421 10.3431ZM23.6274 11.3431L23.6274 19.8284H21.6274L21.6274 11.3431L23.6274 11.3431ZM23.3345 12.0502L12.7279 22.6568L11.3137 21.2426L21.9203 10.636L23.3345 12.0502Z"
+                            fill="white"
+                          />
+                        </svg>
+        					 </div>
+                      </div>
+                      ${
+                        elem.description !== undefined
+                          ? `<p>${elem.description}</p>`
+                          : ""
+                      }
+                      ${
+                        elem.list !== undefined
+                          ? `<ul>
+        					${elem.list.map((li, i) => `<li>${li}</li>`).join("")}
+        					</ul>`
+                          : ""
+                      }
+                    </div>
+                  </div>
+                </div>
+        			`;
+      });
+
+      // Add these scripts to your script.js file
+
+      const modal = document.getElementById("modal");
+
+      const closeBtn = document.querySelector(".close");
+
+      // Open the modal
+      function openModal() {
+        modal.style.display = "flex";
+      }
+
+      // Close the modal
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Close the modal if the overlay is clicked
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          closeModal();
+        }
+      };
+
+      closeBtn.addEventListener("click", () => {
+        closeModal();
+      });
+
+      const modalTitle = document.querySelector(".modal__content-title");
+      const yellowButtonLabel = document.querySelector(".yellow-button-label");
+
+      const mServicesItems = document.querySelectorAll(".m-services__item");
+      mServicesItems.forEach((elem, index) => {
+        elem.addEventListener("click", () => {
+          openModal();
+
+          const modaltopInfo = document.querySelector(".modal__top-info");
+          modaltopInfo.innerHTML = "";
+
+          const priceDiv = document.querySelector(".price");
+          priceDiv.innerHTML = "";
+
+          const receiptTimeDiv = document.querySelector(".receipt-time");
+          receiptTimeDiv.innerHTML = "";
+
+          modalTitle.innerHTML = services[index].title;
+
+          console.log("modalTitle.innerHTML", modalTitle.innerHTML);
+
+          if (
+            services[index].title === "Санитарная книжка(медицинская книжка)" ||
+            services[index].title ===
+              "Периодический профилактический медицинский осмотр работников"
+          ) {
+            yellowButtonLabel.textContent = "Оставить заявку";
+          } else {
+            yellowButtonLabel.textContent = "Получить";
+          }
+          if (services[index].title === "Справка 075/У") {
+            const peopleContainer = document.querySelector(".people-container");
+            peopleContainer.style.display = "grid";
+          } else {
+            const peopleContainer = document.querySelector(".people-container");
+            peopleContainer.style.display = "none";
+          }
+          if (services[index].title === "Больничный лист") {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+					<p>это официальный документ, который
+на определенное время освобождает человека от работы по причине
+болезни,и только после осмотра врача (оплачивается
+дополнительно).Минимальный срок 3 дня,максимальный срок 5 дней</p>
+				`;
+          } else if (services[index].title === "Справка 073/У") {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+					<p><span class="bold">При наличии справок от нарколога и психиатра (Egov.kz)</span><br>
+терапевт или врач общей практики (семейный врач) — обязательно;<br>
+офтальмолог — обязательно;<br>
+отоларинголог — обязательно;</p>
+				`;
+          } else if (
+            services[index].title === "Паспорт здоровья ребенка (форма 026/у)"
+          ) {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+					<ul>
+						<li>Педиатр;</li>
+						<li>Отоларинголог;</li>
+						<li>Невролог;</li>
+						<li>Офтальмолог;</li>
+						<li>Хирург-ортопед;</li>
+						<li>Кал на яйца глист;</li>
+						<li>Клинический анализ крови(ОАК);</li>
+						<li>Общий анализ мочи (ОАМ);</li>
+						<li>Заключение педиатра.</li>
+					</ul>
+				`;
+          } else if (
+            services[index].title === "Справка 076/У" ||
+            services[index].title === "Справка 069/У"
+          ) {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+				<p>При наличии справок от нарколога и психиатра (Egov.kz)</p>
+              <ul style="margin-top: 20px">
+                <li>Хирург</li>
+                <li>Офтальмолог</li>
+                <li>Невропатолог</li>
+                <li>Терапевт</li>
+              </ul>
+              <p>
+					<span class="bold">
+                без стоимости микрореакции, рентгена грудной клетки,Вы можете
+                прийти с готовым анализом и рентгенографией грудной клетки сдав
+                у себя в поликлинике
+					 </span>
+              </p>
+				`;
+          } else if (services[index].title === "Справка 072/У") {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+              <ul style="margin-top: 20px">
+                <li>Терапевт</li>
+                <li>ВИЧ</li>
+                <li>Микрореакция</li>
+              </ul>
+              <p>
+					<span class="bold">
+						без стоимости рентгена грудной клетки
+					</span>
+              </p>
+				`;
+          } else if (
+            services[index].title === "Санитарная книжка(медицинская книжка)"
+          ) {
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            //
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+					<p>соответствие работника медицинским требованиям и пройденным обязательным медицинским осмотрам. более подробно вы можете ознакомиться <a href="https://adilet.zan.kz/rus/docs/V2000021443"><span class="bold">по ссылке.</span></a></p>
+				`;
+          } else if (
+            services[index].title ===
+            "Периодический профилактический медицинский осмотр работников"
+          ) {
+            const modaltopInfo = document.querySelector(".modal__top-info");
+            modaltopInfo.innerHTML = `
+              <ul style="margin-top: 20px">
+                <li>Терапевт</li>
+                <li>Невролог</li>
+                <li>Хирург</li>
+                <li>Отоларинголог</li>
+                <li>Гинеколог (для женщин)</li>
+                <li>Дерматолог</li>
+                <li>Офтальмолог</li>
+              </ul>
+				`;
+
+            const bottomDetails = document.querySelector(".bottom__details");
+            bottomDetails.innerHTML = "";
+            bottomDetails.innerHTML = `
+				<ul class="bottom__details" style="margin-top: 20px">
+					<li>
+							<strong>Предварительный:</strong><br>
+							Проводится при приеме на работу или учебу на определение годности к работе или учебе;
+					</li>
+					<br>
+
+					<li>
+							<strong>Периодический (ежегодный):</strong><br>
+							Проводится на предприятиях с вредными (опасными) производственными факторами для определения годности сотрудника к профессии;
+					</li>
+					<br>
+					<li>
+							<strong>Декретированный:</strong><br>
+							Обязательный медосмотр для работающих на эпидемиологических объектах: общественного питания, пищевой промышленности, торговли, учебных заведений и т.д. с оформлением медицинской книжки.
+					</li>
+				</ul>
+				
+				`;
+          }
+
+          if (typeof services[index].price === "number") {
+            console.log(typeof services[index].price);
+            const priceDiv = document.querySelector(".price");
+            priceDiv.innerHTML = `
+      	<h4>Цена</h4>
+                <h2>${services[index].price} тнг.</h2>
+      `;
+          }
+          if (Array.isArray(services[index].price)) {
+            console.log(Array.isArray(services[index].price));
+            const priceDiv = document.querySelector(".price");
+            priceDiv.innerHTML = `
+      	<h4>Цена</h4>
+      	${services[index].price
+          .map(
+            (item, i) =>
+              `<p style="color: #04633e">
+      				${item}
+      			</p>`
+          )
+          .join("")}
+      			 `;
+          }
+          if (typeof services[index].price === "string") {
+            console.log(services[index].price);
+            const priceDiv = document.querySelector(".price");
+            priceDiv.innerHTML = `
+					<h4>${services[index].price}</h4>
+				`;
+          }
+          if (typeof services[index].receiptTime === "string") {
+            const receiptTimeDiv = document.querySelector(".receipt-time");
+            receiptTimeDiv.innerHTML = `
+				<h4>Срок получения</h4>
+				<h2>${services[index].receiptTime}</h2>
+				`;
+          }
+          if (Array.isArray(services[index].receiptTime)) {
+            const receiptTimeDiv = document.querySelector(".receipt-time");
+            receiptTimeDiv.innerHTML = `
+						<h4>Срок получения</h4>
+						<ul>
+						${services[index].receiptTime
+              .map(
+                (item, i) =>
+                  `<li>
+									${item}
+								</li>`
+              )
+              .join("")}
+						</ul>
+      			 `;
+          }
+        });
       });
     </script>
   </body>
