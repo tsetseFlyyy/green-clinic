@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles/global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Терапия</title>
+  </head>
+  <body>
+    <section class="direction section container">
+      <div class="breadcrumbs">
+        <a href="#">
+          <span>Главная</span>
+        </a>
+        <a href="#">
+          <span>Платная поликлиника</span>
+        </a>
+        <a href="#">
+          <span>Терапия</span>
+        </a>
+      </div>
+      <h1 class="direction-title title animation-title">Терапия</h1>
+      <div class="search__input">
+        <svg
+          width="26"
+          height="24"
+          viewBox="0 0 26 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="11.6757" cy="11" rx="6.32411" ry="6" stroke="#004C2E" />
+          <path
+            d="M21.1611 20L17.999 17"
+            stroke="#004C2E"
+            stroke-linecap="round"
+          />
+        </svg>
+        <input id="searchInput" type="text" placeholder="Прейскурант" />
+      </div>
+      <div class="direction__details">
+        <div class="direction__about">
+          <h3>О направлении</h3>
+          <p>
+            диагностика и лечение внутренних болезней, к которым относят
+            заболевания легких и бронхов, сердца и сосудов, желудочно-кишечного
+            тракта и печени, а также болезни суставов, мышц и костей.
+          </p>
+          <button class="yellow-button">
+            <span class="yellow-button-label">Записаться</span>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
+                fill="#262626"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="direction__requirements">
+          <h3>Обязательные документы</h3>
+          <p>Удостоверение личности/паспорт</p>
+        </div>
+      </div>
+      <h1 class="direction-title title specialists-title">
+        Специалисты направления
+      </h1>
+      <div class="specialists"></div>
+    </section>
+    <script>
+      let specialistsData = [
+        {
+          id: 1,
+          imgSrc:
+            "https://img.freepik.com/premium-vector/cartoon-drawing-doctor_29937-8137.jpg",
+          name: "Оспанов Орал Базарбаевич",
+          position: "Врач-хирург",
+          experience: "Стаж более 30 лет",
+          schedule: [
+            {
+              day: "Пн.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Ср.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Чт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Пт.",
+              time: "-",
+            },
+            {
+              day: "Сб.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вс.",
+              time: "-",
+            },
+          ],
+        },
+        {
+          id: 2,
+          imgSrc:
+            "https://img.freepik.com/premium-vector/cartoon-drawing-doctor_29937-8137.jpg",
+          name: "Оспанов Орал Базарбаевич",
+          position: "Врач-хирург",
+          experience: "Стаж более 30 лет",
+          schedule: [
+            {
+              day: "Пн.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Ср.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Чт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Пт.",
+              time: "-",
+            },
+            {
+              day: "Сб.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вс.",
+              time: "-",
+            },
+          ],
+        },
+        {
+          id: 3,
+          imgSrc:
+            "https://img.freepik.com/premium-vector/cartoon-drawing-doctor_29937-8137.jpg",
+          name: "Оспанов Орал Базарбаевич",
+          position: "Врач-хирург",
+          experience: "Стаж более 30 лет",
+          schedule: [
+            {
+              day: "Пн.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Ср.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Чт.",
+              time: "09:00 - 10:00",
+            },
+            {
+              day: "Пт.",
+              time: "-",
+            },
+            {
+              day: "Сб.",
+              time: "16:00 - 19:00",
+            },
+            {
+              day: "Вс.",
+              time: "-",
+            },
+          ],
+        },
+      ];
+
+      const specialistsDiv = document.querySelector(".specialists");
+      specialistsData.forEach((elem, index) => {
+        specialistsDiv.innerHTML += `
+			<div class="specialist">
+          <img
+            src="${elem.imgSrc}"
+            alt=""
+          />
+          <div class="specialist__details">
+            <h4>${elem.name}</h4>
+            <h5>${elem.position}</h5>
+            <p>${elem.experience}</p>
+            <div class="schedule">
+              <div class="schedule__days">
+					${elem.schedule
+            .map(
+              (item, i) =>
+                `<div class="schedule__day">
+						  <div class="schedule__day-green-circle">${item.day}</div>
+						  <p>${item.time}</p>
+						</div>`
+            )
+            .join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+			
+			`;
+      });
+    </script>
+  </body>
+</html>
