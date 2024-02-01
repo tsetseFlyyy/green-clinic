@@ -31,13 +31,6 @@
   color: white;
 }
 
-.h-refresher__one {
-  border: 1px solid #0f8f5d;
-  border-radius: 90px;
-  padding: 46px 49px;
-  margin-top: 25px;
-}
-
 .h-refresher__one h3 {
   font-family: Geologica;
   font-size: 24px;
@@ -55,8 +48,8 @@
   gap: 45px;
 }
 
-.h-refresher__one-col p,
-.h-refresher__one-col li {
+.h-refresher__card p,
+.h-refresher__card li {
   font-family: Geologica;
   font-size: 18px;
   font-weight: 700;
@@ -66,7 +59,7 @@
   color: white;
 }
 
-.h-refresher__one-col li {
+.h-refresher__card li {
   font-weight: 400;
 }
 
@@ -88,4 +81,15 @@
 .h-refresher__one-col-desc {
   font-weight: 600;
   margin-top: 37px;
+}
+
+.h-refresher__card {
+  border: 1px solid #0f8f5d;
+  border-radius: 90px;
+  padding: 46px 49px;
+  margin-top: 25px;
+}
+
+.h-refresher__two p:not(:first-of-type) {
+	margin-top: 30px;
 }
