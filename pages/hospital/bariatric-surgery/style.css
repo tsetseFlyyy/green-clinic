@@ -1,0 +1,337 @@
+.section {
+  background-image: url("../../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.direction {
+  min-height: 100vh;
+}
+
+.direction-title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.direction__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.direction__details h3 {
+  font-family: Geologica;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.direction__details p {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
+.direction__about {
+  /*margin-right: 122px;*/
+  width: 50%;
+}
+
+.direction__requirements {
+  width: 37%;
+}
+
+.yellow-button {
+  border: none;
+  background: #ffca79;
+  font-family: Geologica;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 30px;
+  border-radius: 108px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.yellow-button span {
+  margin-right: 10px;
+}
+
+.specialists-title {
+  margin-top: 120px;
+}
+
+.specialist {
+  display: flex;
+  align-items: stretch;
+}
+
+.specialist:not(:first-of-type) {
+  margin-top: 80px;
+}
+
+.specialist img {
+  width: 329px;
+  height: 391px;
+  border-radius: 90px 90px 90px 20px;
+  object-position: center;
+  object-fit: cover;
+  margin-right: 57px;
+}
+
+.specialist__details h4 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.specialist__details h5 {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.specialist__details p {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 250;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.schedule__days {
+  padding: 76px 102px;
+  background-color: #fff;
+  border-radius: 90px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 59px;
+}
+
+.schedule__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule__day-green-circle {
+  width: 73px;
+  height: 65px;
+  background-color: #27ae79;
+  border-radius: 90px;
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule__day p {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #262626;
+}
+
+.direction__slider {
+  width: 45%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 90px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 68px;
+  padding-left: 44px;
+  background-color: #04633e;
+  background-image: url("../../../images/slide-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-slide__details {
+  width: 55%;
+}
+
+.swiper-slide h3 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.direction__card {
+  background-color: #04633e;
+  border-radius: 90px;
+  padding: 67px 115px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.direction__card h3 {
+  font-family: Geologica;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.direction__card p {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+}
+
+.doctors__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.doctors__card img {
+  width: 100%;
+  min-height: 494px;
+  flex-shrink: 0;
+  border-radius: 90px 90px 90px 20px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.doctors__card-name {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+.doctors__card-position {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 9px;
+}
+
+.doctors__card-exp {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.button__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button__container button {
+	margin-top: 50px;
+}
+
+@media (max-width: 1600px) {
+  .doctors__container {
+    gap: 30px;
+  }
+  .doctors__card img {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .doctors__card img {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .doctors__card img {
+    min-height: 310px;
+  }
+  .doctors__container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .doctors__card img {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .doctors__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .doctors__card img {
+    min-height: 330px;
+  }
+}
