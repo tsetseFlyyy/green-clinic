@@ -366,12 +366,10 @@
       var block1 = document.querySelector(".block1");
       var block2 = document.querySelector(".block2");
       var block3 = document.querySelector(".block3");
-      var block4 = document.querySelector(".block4");
 
       var animation1Triggered = false;
       var animation2Triggered = false;
       var animation3Triggered = false;
-      var animation4Triggered = false;
 
       var options = {
         root: null,
@@ -426,22 +424,6 @@
       options);
 
       observerBlock3.observe(block3);
-
-      var observerBlock4 = new IntersectionObserver(function (
-        entries,
-        observer
-      ) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !animation4Triggered) {
-            block4.classList.add("visible");
-            animation4Triggered = true;
-            observerBlock4.unobserve(block4);
-          }
-        });
-      },
-      options);
-
-      observerBlock4.observe(block4);
     </script>
   </body>
 </html>
