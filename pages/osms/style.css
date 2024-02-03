@@ -89,37 +89,37 @@
 }
 
 .first-osms__card {
-	opacity: 0;
-	transform: translateY(100px);
-	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
- }
- 
- .first-osms__card.visible {
-	opacity: 1;
-	transform: translateY(0);
- }
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.first-osms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .second-osms__card {
-	opacity: 0;
-	transform: translateY(100px);
-	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
- }
- 
- .second-osms__card.visible {
-	opacity: 1;
-	transform: translateY(0);
- }
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.second-osms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .third-osms__card {
-	opacity: 0;
-	transform: translateY(100px);
-	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Добавленные переходы для плавности */
- }
- 
- .third-osms__card.visible {
-	opacity: 1;
-	transform: translateY(0);
- }
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.third-osms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (max-width: 1400px) {
   .osms__hero-description {

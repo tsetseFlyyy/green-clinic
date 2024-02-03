@@ -28,7 +28,7 @@
 }
 
 .bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .relative {
@@ -45,15 +45,25 @@ a {
   color: inherit;
 }
 
+.roulet__preview,
+.roulet__postview {
+  height: 565px;
+}
+
 ul,
 ol {
-  list-style-position: inside;
+  /*list-style-position: inside;*/
+  margin-left: 16px;
 }
 
 .breadcrumbs {
   opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
   transform: translateY(-50px); /* Начальное значение смещения вниз */
   animation: slide-down 1s ease-in-out forwards;
+}
+
+.close {
+	cursor: pointer;
 }
 
 @keyframes slide-down {
