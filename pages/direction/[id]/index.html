@@ -21,56 +21,67 @@
         </a>
       </div>
       <h1 class="direction-title title animation-title">Терапия</h1>
-      <div class="search__input">
-        <svg
-          width="26"
-          height="24"
-          viewBox="0 0 26 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <ellipse cx="11.6757" cy="11" rx="6.32411" ry="6" stroke="#004C2E" />
-          <path
-            d="M21.1611 20L17.999 17"
-            stroke="#004C2E"
-            stroke-linecap="round"
-          />
-        </svg>
-        <input id="searchInput" type="text" placeholder="Прейскурант" />
-      </div>
-      <div class="direction__details">
-        <div class="direction__about">
-          <h3>О направлении</h3>
-          <p>
-            диагностика и лечение внутренних болезней, к которым относят
-            заболевания легких и бронхов, сердца и сосудов, желудочно-кишечного
-            тракта и печени, а также болезни суставов, мышц и костей.
-          </p>
-          <button class="yellow-button">
-            <span class="yellow-button-label">Записаться</span>
-            <svg
-              width="24"
-              height="25"
-              viewBox="0 0 24 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
-                fill="#262626"
-              />
-            </svg>
-          </button>
+      <div class="block1">
+        <div class="search__input">
+          <svg
+            width="26"
+            height="24"
+            viewBox="0 0 26 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="11.6757"
+              cy="11"
+              rx="6.32411"
+              ry="6"
+              stroke="#004C2E"
+            />
+            <path
+              d="M21.1611 20L17.999 17"
+              stroke="#004C2E"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input id="searchInput" type="text" placeholder="Прейскурант" />
         </div>
-        <div class="direction__requirements">
-          <h3>Обязательные документы</h3>
-          <p>Удостоверение личности/паспорт</p>
+        <div class="direction__details">
+          <div class="direction__about">
+            <h3>О направлении</h3>
+            <p>
+              диагностика и лечение внутренних болезней, к которым относят
+              заболевания легких и бронхов, сердца и сосудов,
+              желудочно-кишечного тракта и печени, а также болезни суставов,
+              мышц и костей.
+            </p>
+            <button class="yellow-button">
+              <span class="yellow-button-label">Записаться</span>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
+                  fill="#262626"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="direction__requirements">
+            <h3>Обязательные документы</h3>
+            <p>Удостоверение личности/паспорт</p>
+          </div>
         </div>
       </div>
-      <h1 class="direction-title title specialists-title">
-        Специалисты направления
-      </h1>
-      <div class="specialists"></div>
+      <div class="block2">
+        <h1 class="direction-title title specialists-title">
+          Специалисты направления
+        </h1>
+        <div class="specialists"></div>
+      </div>
     </section>
     <script>
       let specialistsData = [
@@ -220,6 +231,55 @@
 			
 			`;
       });
+    </script>
+    <script>
+      var block1 = document.querySelector(".block1");
+      var block2 = document.querySelector(".block2");
+      var block3 = document.querySelector(".block3");
+      var block4 = document.querySelector(".block4");
+
+      var animation1Triggered = false;
+      var animation2Triggered = false;
+      var animation3Triggered = false;
+      var animation4Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerBlock1 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            block1.classList.add("visible");
+            animation1Triggered = true;
+            observerBlock1.unobserve(block1);
+          }
+        });
+      },
+      options);
+
+      observerBlock1.observe(block1);
+
+      var observerBlock2 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation2Triggered) {
+            block2.classList.add("visible");
+            countNumbers();
+            animation2Triggered = true;
+            observerBlock2.unobserve(block2);
+          }
+        });
+      },
+      options);
+
+      observerBlock2.observe(block2);
     </script>
   </body>
 </html>
