@@ -117,7 +117,7 @@ span {
   flex-direction: column;
   align-items: center;
   padding: 56px 66px 71px;
-  height: 347px;
+  /*height: 347px;*/
 }
 
 .rentgen__step p {
@@ -444,11 +444,15 @@ span {
   .rentgen__step p {
     font-size: 18px;
   }
+
+  .rentgen__button-one {
+	margin-right: 10px;
+ }
 }
 
 @media (max-width: 1300px) {
   .rentgen__step {
-    padding: 30px 25px 0;
+    padding: 30px 25px 20px;
   }
 }
 
