@@ -103,6 +103,7 @@
 .specialist {
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
 }
 
 .specialist:not(:first-of-type) {
@@ -190,6 +191,7 @@
   letter-spacing: 0em;
   text-align: left;
   color: #262626;
+  white-space: nowrap;
 }
 
 /*ANIMATIONS*/
@@ -214,4 +216,62 @@
 .block2.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1900px) {
+  .schedule__days {
+    padding: 76px 60px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .schedule__days {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .schedule__days {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .schedule__days {
+    gap: 20px;
+    padding: 76px 33px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .schedule__days {
+    gap: 40px;
+    width: 900px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 1450px) {
+  .schedule__days {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .schedule__days {
+    width: 750px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .schedule__days {
+    width: 700px;
+  }
+
+  .specialist img {
+    margin-right: 40px;
+  }
 }
