@@ -491,6 +491,7 @@
 .modal__content-bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   margin-top: 25px;
 }
 
@@ -512,6 +513,7 @@
   line-height: 25px;
   letter-spacing: -0.04em;
   text-align: left;
+  white-space: nowrap;
 }
 
 .modal__content-col-item:not(:first-of-type) {
