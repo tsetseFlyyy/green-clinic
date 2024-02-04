@@ -338,6 +338,93 @@ span {
   line-height: 35px;
 }
 
+.contraindications1-small {
+  background-image: url("../../../images/contraindications1-small-bg.png");
+}
+
+.contraindications2-small {
+  background-image: url("../../../images/contraindications2-small-bg.png");
+}
+
+/*ANIMATIONS*/
+
+.block1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block2 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block3 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block4 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block4.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block5 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block5.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block6 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block6.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block7 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block7.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 1600px) {
   .kt__steps-container {
     gap: 20px;
@@ -386,6 +473,6 @@ span {
   }
 
   .contraindications h1 {
-	font-size: 41px;
+    font-size: 41px;
   }
 }
