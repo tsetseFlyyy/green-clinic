@@ -21,7 +21,7 @@
         </a>
       </div>
       <h1 class="rentgen__title title animation-title">Рентген</h1>
-      <div class="rentgen__hero">
+      <div class="rentgen__hero block1">
         <div class="rentgen__hero-buttons rentgen__buttons">
           <div class="rentgen__button rentgen__button-one">
             <span>Записаться на приём</span>
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="search__container">
+      <div class="search__container block2">
         <h2>Направление и услуги</h2>
         <div class="search__input">
           <svg
@@ -85,7 +85,7 @@
           <input id="searchInput" type="text" placeholder="Найти..." />
         </div>
       </div>
-      <div class="rentgen__steps">
+      <div class="rentgen__steps block3">
         <h1 class="rentgen__steps-title title">
           4 простых шага для прохождения обследования по ОСМС
         </h1>
@@ -113,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="contraindications">
+      <div class="contraindications block4">
         <h1 class="title">Противопоказания</h1>
         <div class="contraindications__lists">
           <div class="contraindications__lists-left">
@@ -146,7 +146,7 @@
           </div>
         </div>
       </div>
-      <div class="contraindications">
+      <div class="contraindications contraindications-2 block5">
         <h1 class="title">Когда применяется</h1>
         <p>
           Сканирование можно использовать для проверки большинства частей
@@ -165,7 +165,7 @@
           <li>определения внутренних травм и кровотечений.</li>
         </ul>
       </div>
-      <div class="details">
+      <div class="details block6">
         <div class="details__left">
           <h1 class="title">Длительность</h1>
           <h2>Обследование занимает 5-15 минут.</h2>
@@ -185,7 +185,7 @@
           </p>
         </div>
       </div>
-      <div class="transparent__card">
+      <div class="transparent__card block7">
         <h1 class="title">Подготовка к исследованию</h1>
         <div class="transparent__card-details">
           <div class="transparent__card-details-left">
@@ -219,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="green__card">
+      <div class="green__card block8">
         <h1 class="title">При диагностике с контрастом нужно:</h1>
         <ul>
           <li>
@@ -248,5 +248,159 @@
         </ul>
       </div>
     </section>
+    <script>
+      var block1 = document.querySelector(".block1");
+      var block2 = document.querySelector(".block2");
+      var block3 = document.querySelector(".block3");
+      var block4 = document.querySelector(".block4");
+      var block5 = document.querySelector(".block5");
+      var block6 = document.querySelector(".block6");
+      var block7 = document.querySelector(".block7");
+      var block8 = document.querySelector(".block8");
+
+      var animation1Triggered = false;
+      var animation2Triggered = false;
+      var animation3Triggered = false;
+      var animation4Triggered = false;
+      var animation5Triggered = false;
+      var animation6Triggered = false;
+      var animation7Triggered = false;
+      var animation8Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerBlock1 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            block1.classList.add("visible");
+            animation1Triggered = true;
+            observerBlock1.unobserve(block1);
+          }
+        });
+      },
+      options);
+
+      observerBlock1.observe(block1);
+
+      var observerBlock2 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation2Triggered) {
+            block2.classList.add("visible");
+            countNumbers();
+            animation2Triggered = true;
+            observerBlock2.unobserve(block2);
+          }
+        });
+      },
+      options);
+
+      observerBlock2.observe(block2);
+
+      var observerBlock3 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation3Triggered) {
+            block3.classList.add("visible");
+            animation3Triggered = true;
+            observerBlock3.unobserve(block3);
+          }
+        });
+      },
+      options);
+
+      observerBlock3.observe(block3);
+
+      var observerBlock4 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation4Triggered) {
+            block4.classList.add("visible");
+            animation4Triggered = true;
+            observerBlock4.unobserve(block4);
+          }
+        });
+      },
+      options);
+
+      observerBlock4.observe(block4);
+
+      var observerBlock5 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation5Triggered) {
+            block5.classList.add("visible");
+            countNumbers();
+            animation5Triggered = true;
+            observerBlock5.unobserve(block5);
+          }
+        });
+      },
+      options);
+
+      observerBlock5.observe(block5);
+
+      var observerBlock6 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation6Triggered) {
+            block6.classList.add("visible");
+            animation6Triggered = true;
+            observerBlock6.unobserve(block6);
+          }
+        });
+      },
+      options);
+
+      observerBlock6.observe(block6);
+
+      var observerBlock7 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation7Triggered) {
+            block7.classList.add("visible");
+            animation7Triggered = true;
+            observerBlock7.unobserve(block7);
+          }
+        });
+      },
+      options);
+
+      observerBlock7.observe(block7);
+
+      var observerBlock8 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation8Triggered) {
+            block8.classList.add("visible");
+            animation8Triggered = true;
+            observerBlock8.unobserve(block8);
+          }
+        });
+      },
+      options);
+
+      observerBlock8.observe(block8);
+    </script>
   </body>
 </html>
