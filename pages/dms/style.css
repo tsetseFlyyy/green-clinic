@@ -141,13 +141,12 @@
 .dms__detail-innerrow {
   margin-top: 50px;
   display: none;
-  visibility: hidden;
   align-items: center;
   transition: 1s ease-in-out;
 }
 
 .dms__detail-innerrow.visible {
-  visibility: flex;
+  display: flex;
 }
 
 .dms__detail-innerrow span {
