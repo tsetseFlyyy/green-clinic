@@ -1,0 +1,109 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.vacancies {
+  min-height: 100vh;
+}
+
+.vacancies__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
+.vacancy__container-item {
+  border: 1px solid #0f8f5d;
+  border-radius: 90px;
+  padding: 46px 56px 68px;
+}
+
+.vacancy__container-item:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+.vacancy__container-item h3 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.vacancy__container-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vacancy__container-item p {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 15px;
+}
+
+.vacancy__container-item-details p {
+  margin-top: 0;
+}
+
+.vacancy__container-item-details li {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.open-close {
+  transform: rotate(0);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.open-close.rotate {
+  transform: rotate(180deg);
+}
+
+/*ANIMATIONS*/
+
+.block1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vacancy__container-item-details {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 21px;
+  transition: 0.625s ease-in-out;
+}
+
+.vacancy__container-item-details.visible {
+  opacity: 1;
+  max-height: 200px;
+}

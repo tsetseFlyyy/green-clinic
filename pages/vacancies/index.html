@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Вакансии</title>
+  </head>
+  <body>
+    <section class="vacancies section container">
+      <div class="breadcrumbs">
+        <a href="#">
+          <span>Главная</span>
+        </a>
+        <a href="#">
+          <span>Вакансии</span>
+        </a>
+      </div>
+      <h1 class="vacancies__title animation-title title">Вакансии</h1>
+      <div class="vacancies-wrapper block1">
+        <div class="vacancy__container">
+          <div class="vacancy__container-item">
+            <div class="vacancy__container-item-top">
+              <h3>Врач общей практики</h3>
+              <svg
+                class="open-close"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 11.25L9 6.75L4.5 11.25"
+                  stroke="#FFCA79"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p>Вакансия опубликована 06.03.2023</p>
+            <div class="vacancy__container-item-details">
+              <p>Информация о вакансии:</p>
+              <ul>
+                <li>Тип занятости постоянная</li>
+                <li>Стажировка (2 месяца)</li>
+                <li>График работы полный рабочий день</li>
+                <li>Опыт работы 3 года</li>
+              </ul>
+            </div>
+          </div>
+          <div class="vacancy__container-item">
+            <div class="vacancy__container-item-top">
+              <h3>Врач общей практики</h3>
+              <svg
+                class="open-close"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 11.25L9 6.75L4.5 11.25"
+                  stroke="#FFCA79"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p>Вакансия опубликована 06.03.2023</p>
+            <div class="vacancy__container-item-details">
+              <p>Информация о вакансии:</p>
+              <ul>
+                <li>Тип занятости постоянная</li>
+                <li>Стажировка (2 месяца)</li>
+                <li>График работы полный рабочий день</li>
+                <li>Опыт работы 3 года</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <form action="submit"></form>
+      </div>
+    </section>
+    <script>
+      var block1 = document.querySelector(".block1");
+      var animation1Triggered = false;
+
+      var options = {
+        root: null,
+        threshold: 0.5,
+      };
+
+      var observerBlock1 = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !animation1Triggered) {
+            block1.classList.add("visible");
+            animation1Triggered = true;
+            observerBlock1.unobserve(block1);
+          }
+        });
+      },
+      options);
+
+      observerBlock1.observe(block1);
+    </script>
+    <script>
+      let data = [
+        {
+          id: 1,
+          title: "Врач общей практики",
+          date: "06.03.2023",
+          information: {
+            busyTime: "постоянная",
+            internship: "2 месяца",
+            schedule: "полный рабочий день",
+            experience: "3 года",
+          },
+        },
+        {
+          id: 2,
+          title: "Врач общей практики",
+          date: "06.03.2023",
+          information: {
+            busyTime: "постоянная",
+            internship: "2 месяца",
+            schedule: "полный рабочий день",
+            experience: "3 года",
+          },
+        },
+        {
+          id: 3,
+          title: "Врач общей практики",
+          date: "06.03.2023",
+          information: {
+            busyTime: "постоянная",
+            internship: "2 месяца",
+            schedule: "полный рабочий день",
+            experience: "3 года",
+          },
+        },
+        {
+          id: 4,
+          title: "Врач общей практики",
+          date: "06.03.2023",
+          information: {
+            busyTime: "постоянная",
+            internship: "",
+            schedule: "полный рабочий день",
+            experience: "3 года",
+          },
+        },
+      ];
+
+      console.log(data);
+
+      const vacancyContainer = document.querySelector(".vacancy__container");
+      vacancyContainer.innerHTML = "";
+
+      data.forEach((item, index) => {
+        vacancyContainer.innerHTML += `
+			<div class="vacancy__container-item">
+            <div class="vacancy__container-item-top">
+              <h3>${item.title}</h3>
+              <svg
+                class="open-close"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.5 11.25L9 6.75L4.5 11.25"
+                  stroke="#FFCA79"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p>Вакансия опубликована ${item.date}</p>
+            <div class="vacancy__container-item-details">
+              <p>Информация о вакансии:</p>
+              <ul>
+                <li>Тип занятости ${item.information.busyTime}</li>
+					 ${
+             item.information.internship !== ""
+               ? `<li>Стажировка (${item.information.internship})</li>`
+               : ""
+           }
+                
+                <li>График работы ${item.information.schedule}</li>
+                <li>Опыт работы ${item.information.experience}</li>
+              </ul>
+            </div>
+          </div>
+			`;
+      });
+    </script>
+    <script>
+      const vacancyContainerItemDetails = document.querySelectorAll(
+        ".vacancy__container-item-details"
+      );
+      const buttons = document.querySelectorAll(".open-close");
+      const vacancyContainerItem = document.querySelectorAll(
+        ".vacancy__container-item"
+      );
+      vacancyContainerItem.forEach((elem, index) => {
+        elem.addEventListener("click", () => {
+          console.log("click");
+          vacancyContainerItemDetails[index].classList.toggle("visible");
+          buttons[index].classList.toggle("rotate");
+        });
+      });
+    </script>
+  </body>
+</html>
