@@ -252,9 +252,11 @@
     <script>
       const dmsInnerRows = document.querySelectorAll(".dms__detail-innerrow");
       const buttons = document.querySelectorAll(".open-close");
-      buttons.forEach((elem, index) => {
+      const dmsDetailRows = document.querySelectorAll(".dms__detail-row");
+      dmsDetailRows.forEach((elem, index) => {
         elem.addEventListener("click", () => {
           dmsInnerRows[index].classList.toggle("visible");
+          buttons[index].classList.toggle("rotate");
         });
       });
     </script>

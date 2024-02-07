@@ -121,11 +121,25 @@
   transform: translateY(0);
 }
 
+.open-close {
+  transform: rotate(0);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.open-close.rotate {
+  transform: rotate(45deg);
+}
+
 .dms__details {
   background-color: white;
   border-radius: 90px;
   margin-top: 60px;
   padding: 47px 43px;
+}
+
+.dms__detail-row {
+  cursor: pointer;
 }
 
 .dms__detail-row-top {
