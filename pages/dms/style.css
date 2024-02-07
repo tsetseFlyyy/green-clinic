@@ -1,0 +1,189 @@
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.dms__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.dms__hero {
+  background-image: url("../../images/osms-card-bg.png");
+  padding: 60px 350px 60px 90px;
+  opacity: 0; /* Начальное значение непрозрачности (невидимый элемент) */
+  transform: translateY(100px); /* Начальное значение смещения вниз */
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1; /* Значение непрозрачности при завершении анимации (элемент станет видимым) */
+    transform: translateY(
+      0
+    ); /* Значение смещения при завершении анимации (элемент поднимется вверх) */
+  }
+}
+
+.dms__hero-title {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.dms__hero-description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 38px; /* 158.333% */
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.dms__hero-button {
+  display: inline-flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 108px;
+  color: black;
+  background: #ffca79;
+}
+
+.dms__card {
+  background-color: #04633e;
+  padding: 79px 110px;
+}
+
+.dms__card-headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dms__card h2 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  margin-left: 10px;
+}
+
+.dms__card p {
+  margin-left: 58px;
+  color: #fff;
+  font-family: Geologica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  margin-top: 24px;
+}
+
+.first-dms__card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.first-dms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.second-dms__card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.second-dms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.third-dms__card {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.third-dms__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dms__details {
+  background-color: white;
+  border-radius: 90px;
+  margin-top: 60px;
+  padding: 47px 43px;
+}
+
+.dms__detail-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dms__detail-row:not(:first-of-type) {
+  margin-top: 45px;
+}
+
+.dms__detail-innerrow {
+  margin-top: 50px;
+  display: none;
+  visibility: hidden;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+
+.dms__detail-innerrow.visible {
+  visibility: flex;
+}
+
+.dms__detail-innerrow span {
+  display: flex;
+  align-items: center;
+}
+
+.dms__detail-innerrow span:not(:last-of-type) {
+  margin-right: 60px;
+}
+
+.dms__detail-innerrow span svg {
+  margin-right: 10px;
+}
+
+/*ANIMATIONS*/
+
+.block1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1400px) {
+  .dms__hero-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dms__hero {
+    padding: 60px 220px 60px 90px;
+  }
+}
