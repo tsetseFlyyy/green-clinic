@@ -254,12 +254,7 @@
       const buttons = document.querySelectorAll(".open-close");
       buttons.forEach((elem, index) => {
         elem.addEventListener("click", () => {
-          console.log("open-close");
-          if (!dmsInnerRows[index].classList.contains("visible")) {
-            dmsInnerRows[index].classList.add("visible");
-          } else {
-            dmsInnerRows[index].classList.remove("visible");
-          }
+          dmsInnerRows[index].classList.toggle("visible");
         });
       });
     </script>

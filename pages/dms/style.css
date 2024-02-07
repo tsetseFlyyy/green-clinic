@@ -139,14 +139,20 @@
 }
 
 .dms__detail-innerrow {
-  margin-top: 50px;
-  display: none;
+  display: flex;
+  /*overflow: hidden;*/
+  height: 0;
+  opacity: 0;
   align-items: center;
-  transition: 1s ease-in-out;
+  margin-top: 0;
+  transition: opacity 0.625s ease-in-out, margin-top 1s ease-in-out,
+    height 1s ease-in-out;
 }
 
 .dms__detail-innerrow.visible {
-  display: flex;
+  opacity: 1;
+  height: auto;
+  margin-top: 50px;
 }
 
 .dms__detail-innerrow span {
