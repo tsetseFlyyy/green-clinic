@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="services-container">
-        <div class="service-group">
+        <!--<div class="service-group">
           <div class="service-group-title">
             <div class="service-group-title-left">
               <p>01.</p>
@@ -150,9 +150,10 @@
               <h3>12 000 kzt</h3>
             </div>
           </div>
-        </div>
-        <div class="yellow-button">
-          Отправить запрос<svg
+        </div>-->
+        <!--<div class="yellow-button">
+          Отправить запрос
+          <svg
             width="24"
             height="25"
             viewBox="0 0 24 25"
@@ -164,7 +165,7 @@
               fill="#262626"
             />
           </svg>
-        </div>
+        </div>-->
       </div>
     </section>
     <script>
@@ -179,49 +180,56 @@
               title: "Консультация специалистов",
               services: [
                 {
-                  id: "070201",
+                  id: 1,
                   title: "Первичная консультация врача куратора",
+                  price: "8000",
+                },
+                {
+                  id: 2,
+                  title: "Повторная консультация врача куратора (заключение)",
                   price: "12 000",
                 },
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 3,
+                  title: "Первичная консультация офтальмолога",
+                  price: "9000",
                 },
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
-                },
-                {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 4,
+                  title: "Сопровождение менеджера",
+                  price: "6000",
                 },
               ],
             },
             {
-              title: "Консультация специалистов",
+              title: "Лабораторные исследования",
               services: [
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 1,
+                  title: "Общий анализ крови (34 параметра) + забор ",
+                  price: "2600",
                 },
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 2,
+                  title: "Коагулограмма",
+                  price: "4000",
                 },
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 3,
+                  title:
+                    "K (калий) (Определение калия (K) в сыворотке крови на анализаторе)",
+                  price: "1380",
                 },
                 {
-                  id: "070201",
-                  title: "Первичная консультация врача куратора",
-                  price: "12 000",
+                  id: 4,
+                  title:
+                    "Na (натрий) (Определение натрия (Na) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 5,
+                  title: "Са+ (кальций ионизированный)",
+                  price: "2380",
                 },
               ],
             },
@@ -230,14 +238,191 @@
         {
           title: "Мужской ОНКО",
           price: "314 000",
+          servicesGroup: [
+            {
+              title: "Консультация специалистов ОНКО",
+              services: [
+                {
+                  id: 1,
+                  title: "Первичная консультация врача куратора",
+                  price: "8000",
+                },
+                {
+                  id: 2,
+                  title: "Повторная консультация врача куратора (заключение)",
+                  price: "12 000",
+                },
+                {
+                  id: 3,
+                  title: "Первичная консультация офтальмолога",
+                  price: "9000",
+                },
+                {
+                  id: 4,
+                  title: "Сопровождение менеджера",
+                  price: "6000",
+                },
+              ],
+            },
+            {
+              title: "Лабораторные исследования ОНКО",
+              services: [
+                {
+                  id: 1,
+                  title: "Общий анализ крови (34 параметра) + забор ",
+                  price: "2600",
+                },
+                {
+                  id: 2,
+                  title: "Коагулограмма",
+                  price: "4000",
+                },
+                {
+                  id: 3,
+                  title:
+                    "K (калий) (Определение калия (K) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 4,
+                  title:
+                    "Na (натрий) (Определение натрия (Na) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 5,
+                  title: "Са+ (кальций ионизированный)",
+                  price: "2380",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Сердце",
           price: "139 220",
+          servicesGroup: [
+            {
+              title: "Консультация специалистов Сердце",
+              services: [
+                {
+                  id: 1,
+                  title: "Первичная консультация врача куратора",
+                  price: "8000",
+                },
+                {
+                  id: 2,
+                  title: "Повторная консультация врача куратора (заключение)",
+                  price: "12 000",
+                },
+                {
+                  id: 3,
+                  title: "Первичная консультация офтальмолога",
+                  price: "9000",
+                },
+                {
+                  id: 4,
+                  title: "Сопровождение менеджера",
+                  price: "6000",
+                },
+              ],
+            },
+            {
+              title: "Лабораторные исследования Сердце",
+              services: [
+                {
+                  id: 1,
+                  title: "Общий анализ крови (34 параметра) + забор ",
+                  price: "2600",
+                },
+                {
+                  id: 2,
+                  title: "Коагулограмма",
+                  price: "4000",
+                },
+                {
+                  id: 3,
+                  title:
+                    "K (калий) (Определение калия (K) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 4,
+                  title:
+                    "Na (натрий) (Определение натрия (Na) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 5,
+                  title: "Са+ (кальций ионизированный)",
+                  price: "2380",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Предоперационное обследование",
           price: "250 000",
+          servicesGroup: [
+            {
+              title: "Консультация специалистов Предоперационное обследование",
+              services: [
+                {
+                  id: 1,
+                  title: "Первичная консультация врача куратора",
+                  price: "8000",
+                },
+                {
+                  id: 2,
+                  title: "Повторная консультация врача куратора (заключение)",
+                  price: "12 000",
+                },
+                {
+                  id: 3,
+                  title: "Первичная консультация офтальмолога",
+                  price: "9000",
+                },
+                {
+                  id: 4,
+                  title: "Сопровождение менеджера",
+                  price: "6000",
+                },
+              ],
+            },
+            {
+              title: "Лабораторные исследования Предоперационное обследование",
+              services: [
+                {
+                  id: 1,
+                  title: "Общий анализ крови (34 параметра) + забор ",
+                  price: "2600",
+                },
+                {
+                  id: 2,
+                  title: "Коагулограмма",
+                  price: "4000",
+                },
+                {
+                  id: 3,
+                  title:
+                    "K (калий) (Определение калия (K) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 4,
+                  title:
+                    "Na (натрий) (Определение натрия (Na) в сыворотке крови на анализаторе)",
+                  price: "1380",
+                },
+                {
+                  id: 5,
+                  title: "Са+ (кальций ионизированный)",
+                  price: "2380",
+                },
+              ],
+            },
+          ],
         },
       ];
 
@@ -263,6 +448,10 @@
         }
       });
 
+      let activeTab = "Мужской Базовый";
+
+      const servicesContainer = document.querySelector(".services-container");
+
       const servicesGTab = document.querySelectorAll(".services-g-tab");
 
       servicesGTab.forEach((elem, index) => {
@@ -271,21 +460,151 @@
             item.classList.remove("active");
           });
           elem.classList.add("active");
+          activeTab = elem.children[0].textContent;
+          servicesContainer.innerHTML = "";
+
+          maleData.forEach((item, i) => {
+            if (item.title === activeTab) {
+              console.log("item.title", item.title, activeTab);
+              item.servicesGroup.forEach((serviceGroup, index) => {
+                servicesContainer.innerHTML += `
+				  <div class="service-group">
+					<div class="service-group-title">
+					  <div class="service-group-title-left">
+						 <p>0${index + 1}.</p>
+						 <p>${serviceGroup.title}</p>
+					  </div>
+					  <svg
+						 class="close-open"
+						 width="24"
+						 height="25"
+						 viewBox="0 0 24 25"
+						 fill="none"
+						 xmlns="http://www.w3.org/2000/svg"
+					  >
+						 <circle
+							cx="12"
+							cy="12.9706"
+							r="9"
+							transform="rotate(-90 12 12.9706)"
+							stroke="#27AE79"
+						 />
+						 <path
+							d="M15 12.9706L9 12.9706"
+							stroke="#27AE79"
+							stroke-linecap="square"
+						 />
+						 <path
+							d="M12 9.97058L12 15.9706"
+							stroke="#27AE79"
+							stroke-linecap="square"
+						 />
+					  </svg>
+					</div>
+					<div class="service-group-list">
+						${serviceGroup.services
+              .map(
+                (service, j) =>
+                  `<div class="service-item">
+							  <div class="service-item-left">
+								 <p>${service.id}</p>
+								 <p>${service.title}</p>
+							  </div>
+							  <h3>${service.price} kzt</h3>
+							</div>`
+              )
+              .join("")}
+					</div>
+				 </div>
+				  `;
+              });
+            }
+          });
+
+          const closeOpen = document.querySelectorAll(".close-open");
+          const serviceGroup = document.querySelectorAll(".service-group");
+          const serviceGroupLists = document.querySelectorAll(
+            ".service-group-list"
+          );
+          serviceGroup.forEach((elem, index) => {
+            elem.addEventListener("click", () => {
+              serviceGroupLists[index].classList.toggle("visible");
+              closeOpen[index].classList.toggle("rotate");
+            });
+          });
         });
+      });
+
+      servicesContainer.innerHTML = "";
+
+      maleData.forEach((item, i) => {
+        if (item.title === activeTab) {
+          console.log("item.title", item.title, activeTab);
+          item.servicesGroup.forEach((serviceGroup, index) => {
+            servicesContainer.innerHTML += `
+				  <div class="service-group">
+					<div class="service-group-title">
+					  <div class="service-group-title-left">
+						 <p>0${index + 1}.</p>
+						 <p>${serviceGroup.title}</p>
+					  </div>
+					  <svg
+						 class="close-open"
+						 width="24"
+						 height="25"
+						 viewBox="0 0 24 25"
+						 fill="none"
+						 xmlns="http://www.w3.org/2000/svg"
+					  >
+						 <circle
+							cx="12"
+							cy="12.9706"
+							r="9"
+							transform="rotate(-90 12 12.9706)"
+							stroke="#27AE79"
+						 />
+						 <path
+							d="M15 12.9706L9 12.9706"
+							stroke="#27AE79"
+							stroke-linecap="square"
+						 />
+						 <path
+							d="M12 9.97058L12 15.9706"
+							stroke="#27AE79"
+							stroke-linecap="square"
+						 />
+					  </svg>
+					</div>
+					<div class="service-group-list">
+						${serviceGroup.services
+              .map(
+                (service, j) =>
+                  `<div class="service-item">
+							  <div class="service-item-left">
+								 <p>${service.id}</p>
+								 <p>${service.title}</p>
+							  </div>
+							  <h3>${service.price} kzt</h3>
+							</div>`
+              )
+              .join("")}
+					</div>
+				 </div>
+				  `;
+          });
+        }
       });
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const closeOpen = document.querySelectorAll(".close-open");
-        const serviceGroup = document.querySelectorAll(".service-group");
-        const serviceGroupLists = document.querySelectorAll(
-          ".service-group-list"
-        );
-        serviceGroup.forEach((elem, index) => {
-          elem.addEventListener("click", () => {
-            serviceGroupLists[index].classList.toggle("visible");
-            closeOpen[index].classList.toggle("rotate");
-          });
+      const closeOpen = document.querySelectorAll(".close-open");
+      const serviceGroup = document.querySelectorAll(".service-group");
+      const serviceGroupLists = document.querySelectorAll(
+        ".service-group-list"
+      );
+      serviceGroup.forEach((elem, index) => {
+        elem.addEventListener("click", () => {
+          serviceGroupLists[index].classList.toggle("visible");
+          closeOpen[index].classList.toggle("rotate");
         });
       });
     </script>
