@@ -1,0 +1,148 @@
+.section {
+  background-image: url("../../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.checkup-p {
+  min-height: 100vh;
+}
+
+.checkup-p__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.services-g-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services-g-tab {
+  padding: 20px;
+  border-radius: 108px;
+  background-color: #27ae79;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.services-g-tab.active {
+  background-color: #ffca79;
+}
+
+.services-g-tab.active p {
+  color: #262626;
+}
+
+.services-g-tabs p {
+  color: white;
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.services-container {
+  background-color: white;
+  border-radius: 90px;
+  padding: 47px 41px 60px;
+  margin-top: 30px;
+}
+
+.service-group {
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+.service-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-group-title-left {
+  display: flex;
+  align-items: center;
+  margin-left: 17px;
+}
+
+.service-group-title-left p:first-of-type {
+  margin-right: 13px;
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #939598;
+}
+
+.service-group-title-left p:last-of-type {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0f1721;
+}
+
+.service-group-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+}
+
+.service-group-list.visible {
+  max-height: 400px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 45px;
+  padding-left: 36px;
+  padding-right: 23px;
+}
+
+.service-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.service-item-left p:first-of-type {
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 25px;
+  color: #939598;
+}
+
+.yellow-button {
+  border-radius: 108px;
+  background-color: #ffca79;
+  padding: 30px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 53px;
+}
+
+.yellow-button svg {
+  margin-left: 10px;
+}
+
+.close-open {
+  transform: rotate(0);
+  transition: 1s ease-in-out;
+}
+
+.close-open.rotate {
+  transform: rotate(45deg);
+}
