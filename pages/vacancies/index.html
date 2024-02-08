@@ -23,9 +23,20 @@
         <form action="submit" class="vacancy__form">
           <h3>Хочешь к нам?</h3>
           <p>Пишите на нашу почту hr@greenclinic.kz или заполни форму:</p>
-          <input type="text" id="name" placeholder="Ваше имя" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Ваше имя"
+            pattern="[a-zA-Zа-яА-ЯёЁ\s]+"
+            required
+          />
           <br />
-          <input type="email" id="email" placeholder="Ваш email" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Ваш email"
+            placeholder="Ваш email"
+          />
           <br />
           <input type="tel" id="phone-number" placeholder="Ваш телефон" />
           <br />
@@ -68,6 +79,9 @@
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script>
       var block1 = document.querySelector(".block1");
       var animation1Triggered = false;
@@ -209,6 +223,26 @@
       );
 
       const labelSpan = document.getElementById("labelSpan");
+      // Используем селектор по id, чтобы получить доступ к полю ввода телефонного номера
+      var phoneInput = document.getElementById("phone-number");
+
+      // Создаем маску ввода для телефонного номера с помощью библиотеки imask.js
+
+      var phoneMask = IMask(phoneInput, {
+        mask: "+7 (000) 000-00-00",
+        lazy: false,
+      });
+
+      if (phoneInput.value[4] === "_") {
+        phoneInput.value = "Ваш телефон";
+      }
+
+      document
+        .getElementById("name")
+        .addEventListener("input", function (event) {
+          this.value = this.value.replace(/[0-9]/g, ""); // Заменяем все цифры на пустую строку
+          this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+        });
 
       function checkFileSize() {
         var fileInput = document.getElementById("file");
@@ -240,20 +274,21 @@
         var file = document.getElementById("file").files[0];
         var reader = new FileReader();
 
-        let formData = {
-          name: name,
-          email: email,
-          phoneNumber: phoneNumber,
-          letter: letter,
-          file: file,
-        };
-        console.log(formData);
+        if (
+          email.value !== "" &&
+          email.value.contains("@") &&
+          email.value.contains(".")
+        ) {
+          let formData = {
+            name: name,
+            email: email,
+            phoneNumber: phoneNumber,
+            letter: letter,
+            file: file,
+          };
 
-        name = "";
-        email = "";
-        phoneNumber = "";
-        letter = "";
-        file = "";
+          console.log(formData);
+        }
       }
 
       vacancyFormSubmitBtn.addEventListener("click", (event) => {
