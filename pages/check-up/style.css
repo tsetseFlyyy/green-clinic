@@ -1,0 +1,661 @@
+:root {
+  --extra-extra-small: 374px;
+  --extra-small: 425px;
+  --small: 576px;
+  --medium: 768px;
+  --large: 992px;
+  --extra-large: 1200px;
+  --extra-extra-large: 1400px;
+  --extra-extra-extra-large: 1600px;
+}
+
+.section {
+  background-image: url("../../images/contacts-bg.jpg");
+  padding-bottom: 164px;
+}
+
+.about-clinic {
+  padding-left: 98px;
+  padding-right: 103px;
+}
+
+.about-clinic__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.about-clinic__hero {
+  background-color: #04633e;
+  padding: 183px 154px 234px;
+  background-image: url("../../images/checkup-hero-bg.png");
+  background-position: center;
+  /*background-size: cover;*/
+  background-size: 100% 100%;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slide-up 1s ease-in-out forwards;
+  margin-top: 50px;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-clinic__hero h1 {
+  color: #fff;
+  font-family: "Geologica", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  /*margin-bottom: 50px;*/
+  line-height: 80px;
+  width: 55%;
+}
+
+.about-clinic__hero p {
+  color: #fff;
+  font-family: "Geologica", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  width: 609px;
+  line-height: 38px;
+}
+
+.about-clinic__headline {
+  margin-top: 53px;
+  /*opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;*/
+}
+
+.about-clinic__headline.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-clinic__text {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-clinic__text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-clinic__description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 25px;
+  line-height: 28px;
+}
+
+.about-clinic__description-bold {
+  font-weight: 800;
+  margin-top: 35px;
+}
+
+.transparent-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.transparent-card {
+  border-radius: 90px;
+  border: 1px solid #0f8f5d;
+  padding: 46px 56px 61px;
+}
+
+.transparent-card h4 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.transparent-card p {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 15px;
+}
+
+.advantages-title {
+  margin-top: 120px;
+}
+
+/*ROULETS*/
+
+.roulets {
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+}
+
+.roulet {
+  border-radius: 90px;
+  position: relative;
+  /*margin-right: 30px;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.roulet:last-child {
+  margin-right: 0;
+}
+
+.roulet__preview {
+  border-radius: 173px;
+  background: #2db982;
+  width: fit-content;
+  padding: 60px 45px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.roulet__preview-underlay {
+  background-color: #04633e;
+  border-radius: 173px 0 0 173px;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.99s ease-in-out;
+}
+
+.roulet__preview-underoverlay {
+  background-color: #2db982;
+  border-radius: 173px;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.roulet__preview-num {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: normal;
+}
+
+.roulet__preview-svg {
+  margin-top: 19px;
+  transition: 1s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.roulet__preview-text {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  margin-top: 59px;
+  color: #fff;
+  font-family: Geologica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.roulet-image {
+  width: 0;
+  position: absolute;
+  right: -534px;
+  bottom: 0;
+  z-index: 0;
+  transition: 1s ease-in-out;
+}
+
+.image-visible {
+  width: 1373px;
+}
+
+.roulet__postview {
+  background-color: #04633e;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 0 90px 90px 0;
+  top: 0;
+  z-index: auto;
+  overflow: hidden;
+  width: 0;
+  transition: 1s ease-in-out;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.roulet__postview-content {
+  margin-left: 145px;
+  width: 601px;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  position: absolute;
+  z-index: 3;
+}
+
+.opacity-full {
+  opacity: 1 !important;
+}
+
+.roulet__content-title {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.roulet__postview-content ul {
+  margin-top: 25px;
+}
+
+.roulet__postview-content li {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.roulet__postview-content li:first-child {
+  margin-top: 0;
+}
+
+.map-show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.map-show svg {
+  margin-right: 10px;
+}
+
+.map-show p {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.roulet__content-subtitle {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.roulet__content-description {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  margin-top: 25px;
+}
+
+.roulet__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.roulet__button {
+  width: 290px;
+  text-align: center;
+}
+
+.queue-button {
+  width: 350px;
+  margin-top: 30px;
+}
+
+.roulet__buttons-yellow {
+  border-radius: 108px;
+  background: #ffca79;
+  padding: 20px;
+}
+
+.roulet__buttons-yellow span {
+  color: #262626;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.roulet__buttons-green {
+  border-radius: 108px;
+  background: #2db982;
+  padding: 20px;
+}
+
+.roulet__buttons-green span {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.roulet__postview-content p {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 25px;
+}
+
+/*checkup__steps*/
+
+.checkup__steps {
+  margin-top: 50px;
+}
+
+.step {
+  border-radius: 90px;
+  padding: 30px 89px 31px 68px;
+  display: flex;
+  align-items: center;
+  background-color: #04633e;
+  background-image: url("../../images/checkup__step-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.step:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.step__number {
+  margin-right: 35px;
+  background-color: #ffca79;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 73px;
+  height: 73px;
+  width: 100%;
+}
+
+.step__number span {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.step__text {
+}
+
+.step__text h5 {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.step__text p {
+  font-family: Geologica;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+  color: white;
+}
+
+/*PEOPLE*/
+
+.people-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.people {
+  background-color: #04633e;
+  border-radius: 90px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  height: 445px;
+  cursor: pointer;
+}
+
+.people span {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.people span svg {
+  margin-left: 10px;
+}
+
+.people-image {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  transition: 1s ease-in-out;
+}
+
+.people-image.visible {
+  width: 100%;
+}
+
+/*ANIMATIONS*/
+
+.block1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block2 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block3 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block4 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.block4.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1700px) {
+  .roulet-image {
+    right: -580px;
+  }
+  .roulet__postview-content {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .about-clinic__hero {
+    padding: 140px 120px 180px;
+  }
+
+  .image-visible {
+    width: 1100px;
+  }
+  .roulet-image {
+    right: -550px;
+  }
+  .roulet__postview-content {
+    margin-left: 50px;
+  }
+  .roulet__postview {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .about-clinic__hero {
+    padding: 100px 120px 140px;
+  }
+
+  .about-clinic__hero h1 {
+    font-size: 50px;
+  }
+
+  .about-clinic__hero p {
+    font-size: 19px;
+  }
+
+  .about-clinic__description {
+    font-size: 18px;
+  }
+
+  .roulet__preview {
+    padding: 30px 40px;
+  }
+
+  .roulet__preview-text {
+    font-size: 20px;
+  }
+
+  .roulet__postview {
+    margin-right: 10px;
+  }
+
+  .roulet__postview-content {
+    margin-left: 45px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .roulet__preview {
+    padding: 25px 25px;
+  }
+
+  .roulet__postview-content {
+    width: 550px;
+  }
+
+  .roulet__button {
+    width: 250px;
+  }
+
+  .roulet__button span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-clinic__hero {
+    padding: 100px 100px 140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-clinic__hero {
+    padding: 120px 70px 140px;
+  }
+}
