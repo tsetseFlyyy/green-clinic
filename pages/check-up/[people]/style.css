@@ -95,6 +95,16 @@
   transition: 1s ease-in-out;
 }
 
+.service-group:first-of-type .service-group-list {
+  max-height: 400px;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+}
+
+.service-group:first-of-type .service-group-list.visible {
+  max-height: 0;
+}
+
 .service-group-list.visible {
   max-height: 400px;
 }
