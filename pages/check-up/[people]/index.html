@@ -331,187 +331,110 @@
           });
           elem.classList.add("active");
           activeTab = elem.children[0].textContent;
-          servicesContainer.innerHTML = "";
 
-          maleData.forEach((item, i) => {
-            if (item.title === activeTab) {
-              console.log("item.title", item.title, activeTab);
-              item.servicesGroup.forEach((serviceGroup, index) => {
-                servicesContainer.innerHTML += `
-				  <div class="service-group">
-					<div class="service-group-title">
-					  <div class="service-group-title-left">
-						 <p>0${index + 1}.</p>
-						 <p>${serviceGroup.title}</p>
-					  </div>
-					  <svg
-						 class="close-open"
-						 width="24"
-						 height="25"
-						 viewBox="0 0 24 25"
-						 fill="none"
-						 xmlns="http://www.w3.org/2000/svg"
-					  >
-						 <circle
-							cx="12"
-							cy="12.9706"
-							r="9"
-							transform="rotate(-90 12 12.9706)"
-							stroke="#27AE79"
-						 />
-						 <path
-							d="M15 12.9706L9 12.9706"
-							stroke="#27AE79"
-							stroke-linecap="square"
-						 />
-						 <path
-							d="M12 9.97058L12 15.9706"
-							stroke="#27AE79"
-							stroke-linecap="square"
-						 />
-					  </svg>
-					</div>
-					<div class="service-group-list">
-						${serviceGroup.services
-              .map(
-                (service, j) =>
-                  `<div class="service-item">
-							  <div class="service-item-left">
-								 <p>${service.id}</p>
-								 <p>${service.title}</p>
-							  </div>
-							  <h3>${service.price} kzt</h3>
-							</div>`
-              )
-              .join("")}
-					</div>
-				 </div>
-				  `;
-              });
-            }
-          });
+          fillServicesContainer();
 
-          servicesContainer.innerHTML += `
-	 <div class="yellow-button">
-          Отправить запрос
-          <svg
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
-              fill="#262626"
-            />
-          </svg>
-        </div>
-	 `;
+          closeOpen();
+        });
+      });
 
-          const closeOpen = document.querySelectorAll(".close-open");
-          const serviceGroup = document.querySelectorAll(".service-group");
-          const serviceGroupLists = document.querySelectorAll(
-            ".service-group-list"
-          );
-          serviceGroup.forEach((elem, index) => {
-            elem.addEventListener("click", () => {
-              serviceGroupLists[index].classList.toggle("visible");
-              closeOpen[index].classList.toggle("rotate");
+      function fillServicesContainer() {
+        servicesContainer.innerHTML = "";
+
+        maleData.forEach((item, i) => {
+          if (item.title === activeTab) {
+            console.log("item.title", item.title, activeTab);
+            item.servicesGroup.forEach((serviceGroup, index) => {
+              servicesContainer.innerHTML += `
+					  <div class="service-group">
+						<div class="service-group-title">
+						  <div class="service-group-title-left">
+							 <p>0${index + 1}.</p>
+							 <p>${serviceGroup.title}</p>
+						  </div>
+						  <svg
+							 class="close-open"
+							 width="24"
+							 height="25"
+							 viewBox="0 0 24 25"
+							 fill="none"
+							 xmlns="http://www.w3.org/2000/svg"
+						  >
+							 <circle
+								cx="12"
+								cy="12.9706"
+								r="9"
+								transform="rotate(-90 12 12.9706)"
+								stroke="#27AE79"
+							 />
+							 <path
+								d="M15 12.9706L9 12.9706"
+								stroke="#27AE79"
+								stroke-linecap="square"
+							 />
+							 <path
+								d="M12 9.97058L12 15.9706"
+								stroke="#27AE79"
+								stroke-linecap="square"
+							 />
+						  </svg>
+						</div>
+						<div class="service-group-list">
+							${serviceGroup.services
+                .map(
+                  (service, j) =>
+                    `<div class="service-item">
+								  <div class="service-item-left">
+									 <p>${service.id}</p>
+									 <p>${service.title}</p>
+								  </div>
+								  <h3>${service.price} kzt</h3>
+								</div>`
+                )
+                .join("")}
+						</div>
+					 </div>
+					  `;
             });
+          }
+        });
+
+        servicesContainer.innerHTML += `
+		 <div class="yellow-button">
+				 Отправить запрос
+				 <svg
+					width="24"
+					height="25"
+					viewBox="0 0 24 25"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				 >
+					<path
+					  d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
+					  fill="#262626"
+					/>
+				 </svg>
+			  </div>
+		 `;
+      }
+
+      fillServicesContainer();
+
+      function closeOpen() {
+        const closeOpen = document.querySelectorAll(".close-open");
+        const serviceGroup = document.querySelectorAll(".service-group");
+        const serviceGroupLists = document.querySelectorAll(
+          ".service-group-list"
+        );
+        serviceGroup.forEach((elem, index) => {
+          elem.addEventListener("click", () => {
+            serviceGroupLists[index].classList.toggle("visible");
+            closeOpen[index].classList.toggle("rotate");
           });
         });
-      });
+      }
 
-      servicesContainer.innerHTML = "";
-
-      maleData.forEach((item, i) => {
-        if (item.title === activeTab) {
-          console.log("item.title", item.title, activeTab);
-          item.servicesGroup.forEach((serviceGroup, index) => {
-            servicesContainer.innerHTML += `
-				  <div class="service-group">
-					<div class="service-group-title">
-					  <div class="service-group-title-left">
-						 <p>0${index + 1}.</p>
-						 <p>${serviceGroup.title}</p>
-					  </div>
-					  <svg
-						 class="close-open"
-						 width="24"
-						 height="25"
-						 viewBox="0 0 24 25"
-						 fill="none"
-						 xmlns="http://www.w3.org/2000/svg"
-					  >
-						 <circle
-							cx="12"
-							cy="12.9706"
-							r="9"
-							transform="rotate(-90 12 12.9706)"
-							stroke="#27AE79"
-						 />
-						 <path
-							d="M15 12.9706L9 12.9706"
-							stroke="#27AE79"
-							stroke-linecap="square"
-						 />
-						 <path
-							d="M12 9.97058L12 15.9706"
-							stroke="#27AE79"
-							stroke-linecap="square"
-						 />
-					  </svg>
-					</div>
-					<div class="service-group-list">
-						${serviceGroup.services
-              .map(
-                (service, j) =>
-                  `<div class="service-item">
-							  <div class="service-item-left">
-								 <p>${service.id}</p>
-								 <p>${service.title}</p>
-							  </div>
-							  <h3>${service.price} kzt</h3>
-							</div>`
-              )
-              .join("")}
-					</div>
-				 </div>
-				  `;
-          });
-        }
-      });
-
-      servicesContainer.innerHTML += `
-	 <div class="yellow-button">
-          Отправить запрос
-          <svg
-            width="24"
-            height="25"
-            viewBox="0 0 24 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18 12.5L18.3536 12.1464L18.7071 12.5L18.3536 12.8536L18 12.5ZM6 13C5.72386 13 5.5 12.7761 5.5 12.5C5.5 12.2239 5.72386 12 6 12V13ZM14.3536 8.14645L18.3536 12.1464L17.6464 12.8536L13.6464 8.85355L14.3536 8.14645ZM18.3536 12.8536L14.3536 16.8536L13.6464 16.1464L17.6464 12.1464L18.3536 12.8536ZM18 13H6V12H18V13Z"
-              fill="#262626"
-            />
-          </svg>
-        </div>
-	 `;
-  
-      const closeOpen = document.querySelectorAll(".close-open");
-      const serviceGroup = document.querySelectorAll(".service-group");
-      const serviceGroupLists = document.querySelectorAll(
-        ".service-group-list"
-      );
-      serviceGroup.forEach((elem, index) => {
-        elem.addEventListener("click", () => {
-          serviceGroupLists[index].classList.toggle("visible");
-          closeOpen[index].classList.toggle("rotate");
-        });
-      });
+      closeOpen();
     </script>
   </body>
 </html>
