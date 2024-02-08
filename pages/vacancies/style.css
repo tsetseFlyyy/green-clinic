@@ -265,3 +265,9 @@
   opacity: 1;
   max-height: 200px;
 }
+
+@media (max-width: 1200px) {
+  .vacancy__form {
+    padding: 58px 40px;
+  }
+}
