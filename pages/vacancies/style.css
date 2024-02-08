@@ -82,6 +82,164 @@
   transform: rotate(180deg);
 }
 
+.vacancy__container {
+  width: 41%;
+}
+
+.vacancies-wrapper {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+}
+
+.vacancy__form {
+  padding: 58px;
+  border-radius: 90px;
+  background-color: #04633e;
+  background-size: cover;
+  background-image: url("../../images/form-bg.png");
+  width: 49%;
+}
+
+.vacancy__form h3 {
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+.vacancy__form p {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-top: 15px;
+}
+
+.vacancy__form p:last-of-type {
+  margin-top: 35px;
+}
+
+.vacancy__form input {
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 90px;
+  background-color: #fff;
+  color: #004c2e;
+  padding: 30px 35px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.vacancy__form textarea {
+  color: #004c2e;
+  border-radius: 30px;
+  padding: 30px 35px;
+  outline: none;
+  width: 100%;
+  margin-top: 15px;
+  resize: none;
+  border: none;
+}
+
+.vacancy__form textarea::placeholder,
+.vacancy__form input::placeholder {
+  color: #004c2e;
+  opacity: 1;
+}
+
+.vacancy__form input:first-of-type {
+  margin-top: 35px;
+}
+
+.vacancy__form input:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.vacancy__form button {
+  font-family: Geologica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #262626;
+  background-color: #ffca79;
+  padding: 30px;
+  border-radius: 108px;
+  margin-top: 25px;
+  border: none;
+}
+
+#inputLabel {
+  display: block;
+  font-family: Geologica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 90px;
+  background-color: #fff;
+  color: #004c2e;
+  padding: 30px 35px;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#inputLabel svg {
+  margin-right: 10px;
+}
+
+#file {
+  height: 0;
+  visibility: hidden;
+  margin-top: 0;
+  position: absolute;
+}
+
+/* modal */
+
+#modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  background-color: white;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.modal__content p {
+  font-size: 16 px;
+}
+
 /*ANIMATIONS*/
 
 .block1 {
